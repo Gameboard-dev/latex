@@ -6,5 +6,5 @@
   "description": "Turn a folder of Markdown notes into a LaTeX document and keep its PDF compiled: each note becomes its chapter whenever you save it, with citations, cross-references, tables, figures, equations and a glossary.",
   "author": "Gameboard-dev",
   "authorUrl": "https://github.com/Gameboard-dev",
-  "isDesktopOnly": false
+  "isDesktopOnly": true
 }
