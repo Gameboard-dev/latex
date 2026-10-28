@@ -234,6 +234,8 @@ pub enum Status {
     Stopped,
     /// Converted; this device cannot compile (a phone, or a browser).
     NoCompiler,
+    /// What the computer's build last did, on a device that does not build (remote.rs).
+    Remote(crate::remote::Report),
 }
 
 pub struct App {
@@ -701,7 +703,7 @@ pub fn start(plugin: JsValue, obs: JsValue, require: JsValue, _module: JsValue, 
 }
 
 /// Local time: "2026-10-25 12:04:31".
-fn now_text() -> String {
+pub(crate) fn now_text() -> String {
     let d = Date::new_0();
     format!("{:04}-{:02}-{:02} {:02}:{:02}:{:02}", d.get_full_year(), d.get_month() + 1, d.get_date(), d.get_hours(), d.get_minutes(), d.get_seconds())
 }
@@ -757,6 +759,7 @@ impl App {
                 recount_all().await;
                 write_counts().await;
                 scroll::enable().await;
+                crate::remote::read().await;
                 compile::warm_up().await;
                 // the note already open when the plugin starts, as if it had just been opened
                 let active = with(|a| str(&get(&call!(get(&get(&a.plugin, "app"), "workspace"), getActiveFile), "path"))).unwrap_or_default();
@@ -771,13 +774,19 @@ impl App {
     fn listen(&self) {
         let p = self.plugin.clone();
         let on = |event: &str, f: JsValue| _ = call!(p, registerEvent, call!(self.vault, on, event, f));
-        on("modify", f1(|file| {
-            with(|a| a.saved(&str(&get(&file, "path"))));
-            JsValue::UNDEFINED
-        }));
-        on("create", f1(|file| {
+        // a device that does not build also follows the computer's builds through two files of the output folder
+        // (remote.rs); from a timer, as Obsidian may fire these inside a call made from within `with`
+        let followed = |path: String| _ = js::timeout(0.0, move || crate::remote::changed(&path));
+        on("modify", f1(move |file| {
             let path = str(&get(&file, "path"));
             with(|a| a.saved(&path));
+            followed(path);
+            JsValue::UNDEFINED
+        }));
+        on("create", f1(move |file| {
+            let path = str(&get(&file, "path"));
+            with(|a| a.saved(&path));
+            followed(path);
             JsValue::UNDEFINED
         }));
         on("delete", f1(|file| {
@@ -975,6 +984,19 @@ impl App {
         }
     }
 
+    /// A build's or a preview's start or end, for the devices that do not build (remote.rs): written to the output
+    /// folder's latex-status.json, by the desktop app only and only for an output folder in the vault.
+    pub(crate) fn report(&self, mut r: crate::remote::Report) {
+        if !self.can_compile() || !matches!(self.out(), Place::Vault(_)) {
+            return;
+        }
+        r.at = now_text();
+        r.when = Date::now();
+        if let Ok(text) = serde_json::to_string_pretty(&r) {
+            crate::remote::write_later(self.out().join(crate::remote::FILE), text);
+        }
+    }
+
     // ----- the status bar
 
     pub fn set_status(&mut self, s: Status) {
@@ -1009,6 +1031,7 @@ impl App {
             Status::Failed => (format!("build failed — see log{warned}"), "The last build stopped with an error.".into()),
             Status::Stopped => ("build stopped".into(), "The build was stopped.".into()),
             Status::NoCompiler => (format!("converted {}{warned}", clock()), "Compiling needs Obsidian's desktop app; the chapters are converted.".into()),
+            Status::Remote(r) => crate::remote::text(r, Date::now(), &now_text()[..10]),
         };
         let mut tip = detail;
         if count > 0 {
@@ -1167,7 +1190,11 @@ impl App {
                 let stale: Vec<&str> = out.stale.iter().map(|(_, w)| w.as_str()).collect::<std::collections::BTreeSet<_>>().into_iter().collect();
                 self.preview.last = format!("preview {:.1} s{}", out.ms / 1000.0, if stale.is_empty() { String::new() } else { format!(" · {}", stale.join(", ")) });
                 let problems: String = out.problems.iter().map(|p| format!("\n  warning: {p}")).collect();
-                self.log(&format!("Preview in {:.2} s: {}{}", out.ms / 1000.0, out.steps.join("; "), problems));
+                let line = format!("Preview in {:.2} s: {}{}", out.ms / 1000.0, out.steps.join("; "), problems);
+                // a preview that put nothing into the PDF leaves it to the full build
+                let state = if out.shown { "built" } else { "skipped" };
+                self.report(crate::remote::Report { seconds: out.ms / 1000.0, summary: line.clone(), ..crate::remote::Report::new(state, "preview") });
+                self.log(&line);
                 if out.restored {
                     js::timeout(0.0, || js::spawn(scroll::built()));
                 } else {
@@ -1178,6 +1205,7 @@ impl App {
                 out.build_now
             }
             Err(e) => {
+                self.report(crate::remote::Report { summary: format!("Not previewed: {e}"), ..crate::remote::Report::new("skipped", "preview") });
                 self.log(&format!("Not previewed: {e}"));
                 false
             }

@@ -15,6 +15,7 @@ use crate::app::{with, Status};
 use crate::files::{self, node};
 use crate::js::{self, call, f1, f2, get, obj, set, str};
 use crate::pipeline::{self, Stage};
+use crate::remote::Report;
 
 /// The build in progress, if any.
 #[derive(Default)]
@@ -169,6 +170,7 @@ pub fn cancel() {
             clean().await;
             with(|a| {
                 a.log("Build stopped.");
+                a.report(Report::new("stopped", "full"));
                 a.set_status(Status::Stopped);
             });
         });
@@ -237,6 +239,7 @@ async fn run(gen: u32) {
     let t0 = js::now();
     with(|a| {
         a.build.since = t0;
+        a.report(Report::new("building", "full"));
         a.set_status(Status::Compiling);
     });
     let (mut code, mut failed) = (0i64, String::new());
@@ -316,8 +319,10 @@ fn finish(gen: u32, result: Result<pipeline::Summary, String>) {
             return false;
         }
         a.build.running = false;
+        let seconds = (js::now() - a.build.since) / 1000.0;
         let status = match result {
             Ok(sum) => {
+                a.report(Report { errors: sum.errors, undefined: sum.undefined, seconds, summary: sum.text.clone(), ..Report::new(if sum.ok { "built" } else { "failed" }, "full") });
                 a.log(&sum.text);
                 a.last_build = format!("{} {}", crate::app::clock(), sum.text.lines().next().unwrap_or(""));
                 if sum.ok {
@@ -331,6 +336,7 @@ fn finish(gen: u32, result: Result<pipeline::Summary, String>) {
                 }
             }
             Err(e) => {
+                a.report(Report { errors: 1, summary: format!("Not compiled: {e}"), ..Report::new("failed", "full") });
                 a.log(&format!("Not compiled: {e}"));
                 a.last_build = format!("{} not compiled: {e}", crate::app::clock());
                 Status::Failed
@@ -412,7 +418,12 @@ fn preview_now() {
 
 async fn run_preview() {
     loop {
-        let Some((host, o, fmt)) = with(|a| (a.host(None), a.preview_options(), a.preview.fmt)) else { return };
+        let Some((host, o, fmt)) = with(|a| {
+            a.report(Report::new("building", "preview"));
+            (a.host(None), a.preview_options(), a.preview.fmt)
+        }) else {
+            return;
+        };
         let r = crate::preview::preview(&host, &o, fmt).await;
         if matches!(&r, Ok(x) if x.shown) {
             crate::scroll::publish().await; // the spliced PDF into the pane, in one write
@@ -441,6 +452,7 @@ async fn run_fast(gen: u32, out: crate::files::Place, s: crate::app::Settings, d
     let t0 = js::now();
     let Some((o, whole)) = with(|a| {
         a.build.since = t0;
+        a.report(Report::new("building", "full"));
         a.set_status(Status::Compiling);
         (a.preview_options(), std::mem::take(&mut a.build.whole) || !s.direct_builds)
     }) else {

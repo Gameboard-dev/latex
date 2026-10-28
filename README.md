@@ -304,6 +304,8 @@ All in the output folder (`<notes folder>/compiled/`):
 | `latex-sync.log` | Every save, conversion warning and build result, with the steps each build ran and why. Read this first. |
 | `.latex-sync-build.log` | What the last build printed (latexmk's or the plugin's own build output). |
 | `main.log` | LaTeX's own log. |
+| `main.shown.pdf` | The PDF the pane shows: a copy of `main.pdf` written once per finished build or preview. |
+| `latex-status.json` | What the desktop app's last build or preview did (state, time, errors), for the status bar of devices that do not build ([below](#following-the-pcs-builds-from-a-browser-or-a-phone)). |
 | `.ignis-build.log` | The transcript of the last build through Ignis (written by Ignis Control). |
 | `.sync-backups/` | Copies of `.tex` files that were edited by hand before the plugin overwrote them. |
 
@@ -322,7 +324,8 @@ Files whose names start with a dot are hidden in Obsidian's file explorer; open 
 | Fast preview does not run | The **Engine** must be LuaLaTeX. |
 | The PDF does not open beside the note | The output folder must be in the vault, and the desktop app is required. |
 | Sync scrolling does nothing | The compile command must write SyncTeX (`-synctex=1`, as the default does). The log says when the SyncTeX file is missing. |
-| On a phone or in a browser the status says `converted` and nothing builds | Expected: the desktop app builds when it sees the saved notes. In a browser through Ignis, see the next section. |
+| On a phone or in a browser the status says `converted` and nothing builds | Expected: the desktop app builds when it sees the saved notes; the status bar then says `built on the PC at …` once the PC's build ends. In a browser through Ignis, see the next section. |
+| In a browser through Ignis the PDF stays old, even after reloading the page | Ignis does not watch the output folder: let it watch `main.pdf`, `main.shown.pdf`, `main.synctex.gz` and `latex-status.json` ([below](#following-the-pcs-builds-from-a-browser-or-a-phone)). |
 | A `.tex` file edited by hand was overwritten | It is in `.sync-backups/`. Edit the note instead. |
 
 ## Building through Ignis
@@ -368,6 +371,26 @@ the desktop plugin builds instead.
 - Only one build runs at a time, and a build is stopped after 600 seconds.
 - Builds are accepted only from a signed-in user (Ignis Control checks the sign-in on every request).
 
+### Following the PC's builds from a browser or a phone
+
+While desktop Obsidian runs on the PC, it builds after every save made anywhere, a browser through Ignis included. A
+device that does not build follows those builds through two files of the output folder:
+
+- **The status bar.** The desktop app writes `latex-status.json` when a build or a preview starts and when it ends.
+  A device that does not build reads it at start and whenever it changes, and shows it: `building on the PC… (started
+  23:28)`, `built on the PC at 23:28 (preview)`, `built on the PC at 23:30 (0 errors, 10 undefined refs)`,
+  `build failed on the PC at 23:31 (3 errors) — see log`. The tooltip has the build's summary.
+- **The PDF.** When `main.shown.pdf` changes, Obsidian's PDF view loads the new copy by itself; with sync scrolling on,
+  the plugin reads the SyncTeX file again and puts the PDF at the note's place, as after a build on the desktop. No
+  pane is opened for it.
+
+Both rely on the device being told that the files changed. Obsidian Sync and similar tools do so. **Ignis does so only
+for files it watches**: if Ignis's ignored paths (its `IGNORED_PATHS` setting) cover the whole output folder, the
+browser never hears of a new PDF, keeps the file's old modification time, and asks for the same address as before, so
+the old PDF is shown even after the page is reloaded. Ignore the folder's contents except those four files, for example
+`/LaTeX/compiled/*,!/LaTeX/compiled/main.pdf,!/LaTeX/compiled/main.shown.pdf,!/LaTeX/compiled/main.synctex.gz,!/LaTeX/compiled/latex-status.json`
+(gitignore patterns: `*` keeps the folder itself watched, and each `!` line watches one file again).
+
 ## Development
 
 The plugin is one crate of the Rust workspace [obsidian-cargo-lib](https://github.com/Gameboard-dev/obsidian-cargo-lib), which holds
@@ -412,6 +435,7 @@ Some tests need real data or TeX and are skipped unless their variables are set:
 | `core/src/pdf.rs`, `core/src/splice.rs` | the spliced PDF |
 | `core/src/synctex.rs`, `core/src/scroll.rs` | SyncTeX lookups, the PDF pane and sync scrolling |
 | `core/src/ignis.rs` | building through Ignis |
+| `core/src/remote.rs` | `latex-status.json`: the PC's builds, written by the desktop app, shown by other devices |
 | `core/src/device.rs` | the per-device commands and the programs they may run |
 | `core/src/files.rs`, `core/src/host.rs` | the output folder's files; the Node side of the preview |
 

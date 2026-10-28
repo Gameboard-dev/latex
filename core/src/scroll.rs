@@ -97,13 +97,18 @@ pub struct Sync {
     /// The property that marks an element whose events this load of the plugin listens to (a new one each load: an
     /// element keeps its properties when the plugin is turned off and on).
     mark: String,
+    /// When this plugin last wrote the shown PDF itself (performance.now()): its own copy is placed by `built`.
+    published: f64,
 }
 
 impl Sync {
     pub fn new() -> Sync {
-        Sync { index: None, maps: HashMap::new(), pointer_pdf: false, quiet_pdf: 0.0, quiet_note: 0.0, lead: None, frame: false, page: 0, gloss: None, gloss_at: String::new(), mark: format!("__latexSync{}", js::now() as u64) }
+        Sync { index: None, maps: HashMap::new(), pointer_pdf: false, quiet_pdf: 0.0, quiet_note: 0.0, lead: None, frame: false, page: 0, gloss: None, gloss_at: String::new(), mark: format!("__latexSync{}", js::now() as u64), published: f64::NEG_INFINITY }
     }
 }
+
+/// How long after this plugin's own write of the shown PDF a change to it is taken as that write (ms).
+const OWN_WRITE_MS: f64 = 5000.0;
 
 fn num(v: &JsValue, k: &str) -> f64 {
     get(v, k).as_f64().unwrap_or(0.0)
@@ -116,7 +121,7 @@ impl App {
 
     /// The PDF the pane shows (`<main>.shown.pdf`, written by `publish`), as a vault path; None when the output
     /// folder is outside the vault (Obsidian cannot show it).
-    fn pdf_path(&self) -> Option<String> {
+    pub(crate) fn pdf_path(&self) -> Option<String> {
         match self.out().join(&format!("{}.shown.pdf", self.settings.main())) {
             Place::Vault(p) => Some(p),
             Place::Disk(_) => None,
@@ -545,8 +550,22 @@ pub async fn publish() {
     })
     .flatten() else { return };
     if let Ok(bytes) = js::wait(call!(ad, readBinary, from.as_str())).await {
+        with(|a| a.sync.published = js::now());
         _ = js::wait(call!(ad, writeBinary, to.as_str(), bytes)).await;
     }
+}
+
+/// The shown PDF changed, written by another device's build (the computer's, seen from Ignis in a browser; remote.rs):
+/// Obsidian's PDF view loads the new copy by itself; with sync on, the SyncTeX file is read again and the PDF placed at
+/// the note once its pages are there, as after a build here (`built`). A pane is not opened for it.
+pub async fn shown_elsewhere() {
+    let Some((own, sync)) = with(|a| (js::now() - a.sync.published < OWN_WRITE_MS, a.settings.sync_scroll)) else { return };
+    if own || !sync {
+        return;
+    }
+    js::sleep(READY_MS).await; // the PDF view starts loading the new copy first
+    load().await;
+    show_pdf(None, false);
 }
 
 pub async fn built() {

@@ -17,6 +17,7 @@ pub mod order;
 pub mod pdf;
 pub mod pipeline;
 pub mod preview;
+mod remote;
 mod scroll;
 pub mod splice;
 pub mod starter;
