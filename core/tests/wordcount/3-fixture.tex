@@ -1,0 +1,166 @@
+% Generated from Vault/LaTeX/3-fixture.md (version 1.0, last updated ?). Edit the note: this file is rewritten from it on every save.
+% !TEX root = main.tex
+\startwordcount{text}
+\section{Text and Emphasis}
+\label{sec:text}
+\printwordcount{text}
+
+% P1.1 | a paragraph label comment, not counted 
+A plain paragraph of running text with a one-to-one match, a state-of-the-art estimator, numbers such as 27, 3.5 and 1,000, a share of 50\% and 7\,\%, a (bracketed aside) and a sentence that ends here. Words separated only by a tie: Mr.~Smith and 372\,ms, and a thin space in 10\,000 people.
+
+Emphasis takes \emph{emphasised words}, \textit{italic words}, \textbf{bold words} and \textbf{*bold italic words}*, \texttt{code\_name--with-dashes} and \texttt{two words}, \textcolor{red}{red words here}, and a \href{https://example.org/a-b_c}{link with text} to a page.
+
+Quotes: ``curly double quotes'', `curly single quotes', it's, the users' choice, "straight double" and 'straight single' marks.
+
+Dashes: pages 4--5, an en dash – here, an em dash — there, joined---up, spaced -- out, a lone - hyphen, and well-known self-evident co-operation.
+
+Characters: café, naïve, Łukasz, Ångström, a×b, 5 × 6, x ≈ y, and an ellipsis… then on.
+
+Very long words that may be hyphenated at the ends of lines: internationalisation, characterisation, incomprehensibilities, counterrevolutionaries, institutionalisation, electroencephalographically, uncharacteristically, telecommunications, interdisciplinarity, compartmentalisation, misunderstandings, disproportionately, representativeness, overgeneralisation, incontrovertibility.
+
+% A comment line with several words that are never counted 
+A line with an end comment %c not counted
+and its continuation.
+
+\subsection{Citations}
+\label{sec:text:cites}
+
+A citation \cite{one}. One with a page \cite[p.~27]{one}. A range \cite[pp.~4–5]{two}. Two keys \cite{one, two}. Three keys \cite{one, two, three}. A prefix \cite[see][p.~2]{two}. A locator on the first key \cites[p.~3]{one}{two}. A prefix in the middle \cites{one}[see][p.~4]{two}{three}. Attached to a word\cite{one} and before a stop \cite{three}.
+
+As \citet{one} argues, and as \citet[p.~4]{two} shows, the claim holds. \Citet{three} agree. \Citet{corp} warns. \Citet{prefix} replies. \Citet{edited} collects. \Citet{accent} compare. \Citet{particle} notes. \Citet{others} found it.
+
+Raw forms: \citet{one,two} and \citep{three} and \citeauthor{two} and \textcite{three} and \parencite[p.~9]{one} and \Citet{accent}.
+
+\subsection{Glossary and References}
+\label{sec:text:refs}
+
+Glossary terms: \gls{FNRATE}, \glspl{FNRATE}, \gls{knowngood}, \Gls{knowngood}, \glspl{knowngood}, \gls{W1}, \glspl{W1}, \gls{shift}, and \glslink{FNRATE}{the signal error} once.
+
+References: Section~\ref{sec:text:cites}, Sections~\ref{sec:text:cites} and \ref{sec:text:lists}, Table~\ref{tab:demo}, Figure~\ref{fig:demo}, Equation~\ref{eq:demo}, Listing~\ref{lst:bench}, \rqref{1} and \hypref{2a}, and (Section~\ref{sec:text:cites}) in brackets.
+
+\subsection{Lists and Footnotes}
+\label{sec:text:lists}
+
+A sentence with a footnote\footnote{A footnote of five words.} and another one\footnote{A second footnote, citing \citet{one} with \emph{emphasis}.} in it.
+
+\begin{itemize}
+\item A bullet item of six words
+\item A second bullet item
+	\item A nested bullet item
+		\item A third-level bullet
+			\item A fourth-level bullet
+\end{itemize}
+
+\begin{enumerate}
+\item A numbered item
+\item A second numbered item
+	\item A nested numbered item
+		\item A third-level numbered item
+			\item A fourth-level numbered item
+\end{enumerate}
+
+The labelled list:
+
+\begin{enumerate}
+  \item[\textbf{RQ1}] \hypertarget{rq1}{}Does the first question hold?
+  \item[\textbf{H2a}] \hypertarget{hyp2a}{}The second hypothesis, in \emph{italics}.
+\end{enumerate}
+
+\phantomsection\label{sec:text:anchor}
+A paragraph ending in a label.
+
+\paragraph{A Run-in Heading} Its text follows on the same line.
+
+\startwordcount{floats}
+\section{Maths, Floats and Code}
+\label{sec:floats}
+\printwordcount{floats}
+
+Inline maths $x^2 + y$ in a sentence, an $n$-fold rise, a 10$\times$ speed-up, $\alpha$-level tests, a value of $5$\% and $p<0.05$.
+
+\[
+a = b + c
+\]
+
+The display above has no number.
+
+\begin{equation}
+E = m c^2
+  \label{eq:demo}
+\end{equation}
+The equation above is numbered.
+
+\begin{align}
+  a &= b + c \\
+  d &= e \nonumber \\
+  f &= g \tag{T}
+\end{align}
+
+\begin{align*}
+  a &= b \\
+  c &= d
+\end{align*}
+
+\begin{gather}
+  a = b \\
+  c = d
+\end{gather}
+
+\begin{multline}
+  a + b + c \\
+  = d + e
+\end{multline}
+
+\begin{equation*}
+  x = y
+\end{equation*}
+
+A table follows.
+
+\begin{table}[htbp]
+\centering
+\caption{A table caption of several words, citing \cite{one}.}
+\label{tab:demo}
+\small
+\begin{tabular}{@{}lc@{}}
+\toprule
+Column one & Column two \\
+\midrule
+table words & more table words \\
+a \gls{FNRATE} cell & \cite{one} \\
+\bottomrule
+\end{tabular}
+\end{table}
+\begin{figure}[htbp]
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+\begin{tikzpicture}
+\node (a) {picture words};
+\end{tikzpicture}
+}
+\caption{A figure caption of several words.}
+\label{fig:demo}
+\end{figure}
+\begin{handtyped}[htbp]
+\handtypedcode{bench}
+\caption{A listing caption of several words}
+\label{lst:bench}
+\end{handtyped}
+\begin{verbatim}
+verbatim code block words
+\end{verbatim}
+
+\FloatBarrier
+
+{\wordcountoff These words are left out of the count.} Counted again after the group.
+
+\subsection*{Unnumbered Heading}
+\phantomsection\addcontentsline{toc}{subsection}{Unnumbered Heading}
+\label{sec:floats:unnumbered}
+
+Words under an unnumbered heading.
+
+% =====================================================================
+
+A paragraph after a divider.
+\stopwordcount

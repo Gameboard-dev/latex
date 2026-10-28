@@ -1,0 +1,46 @@
+{
+ "about": "The counts the thesis's LuaLaTeX counter (wordcount.lua, now in archived/lua-wordcount/) gave for these documents, compiled 2026-10-25 with the thesis's preamble (MiKTeX, latexmk -lualatex): the \\wc@set lines of main.aux. 3-fixture.tex is the converter's output for 3-fixture.md (with glossary.md and 0-preamble.md); probe.tex is raw LaTeX a note may hold, one section per construct.",
+ "documents": {
+  "3-fixture.tex": {
+   "text": 449,
+   "floats": 61
+  },
+  "probe.tex": {
+   "nbsp": 2,
+   "citetthree": 11,
+   "citettwo": 7,
+   "citetnone": 5,
+   "citeauthornone": 1,
+   "Textcite": 4,
+   "citealp": 1,
+   "citeyear": 1,
+   "autocite": 1,
+   "Cite": 1,
+   "Parencite": 1,
+   "textcites": 7,
+   "parencites": 1,
+   "nocite": 2,
+   "Citeauthor": 1,
+   "citeauthortwo": 3,
+   "citeptwo": 1,
+   "citetloc": 4,
+   "description": 6,
+   "url": 4,
+   "mbox": 2,
+   "ldots": 2,
+   "refs": 5,
+   "spaces": 5,
+   "breaks": 4,
+   "accents": 4,
+   "dashcmds": 3,
+   "styles": 8,
+   "glossary": 6,
+   "colours": 5,
+   "nested": 4,
+   "off": 3,
+   "groups": 2,
+   "controlspace": 5,
+   "symbols": 5
+  }
+ }
+}

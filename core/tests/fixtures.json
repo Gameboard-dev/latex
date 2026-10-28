@@ -1,0 +1,1295 @@
+[
+ {
+  "name": "synthetic chapter",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\nversion: 1.0\nlast_updated: 2026-10-25 00:52\nwordcount: true\n---\n# Research Design\n^sec--design\n\n%% EV: 0260%%\nThis is *an* experiment [@oates2006, p. 127], as @hinton2015 argue. @gholami2022 [p. 4] disagree [@a2020; @b2021] and [@c2022;@d2023]; see Section [[#Research Design|Research Design]] and [[#^rq|RQ1]] and [[#^hyp|H2a]]. Quotes “like this” and `batch_static` and **bold** _Null:_ and <span style=\"color:red\">[to do]</span> stay. %% trailing%%\n\nA labelled paragraph with $x_1 = y$ maths. ^sec--datasets\n%%%%\n$$\n  y = \\beta_0 + \\beta_1 x .\n$$\n\n^eq--model\n\n%%%%\nwhere the slope is tested.\n  - first item, which continues here;\n  - second item. ^sec--second\nText directly after the list.\n\n#### Aim.\nThe aim is clear.\n\n```tikz\n\\usetikzlibrary{positioning,calc,decorations.pathreplacing}\n\\begin{document}\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1); % a line\n\\end{tikzpicture}\n\\end{document}\n```\n\n^fig--line\n\n((<tag|Figure)) A line [@oates2006].\n\n\n- **RQ1** Does it? ^rq1\n\n- **H2a** It does. ^hyp2a\n\n^rq\n\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\nversion: 1.0\nlast_updated: 2026-10-25 00:52\nwordcount: true\n---\n# Research Design\n^sec--design\n\n%% EV: 0260%%\nThis is *an* experiment [@oates2006, p. 127], as @hinton2015 argue. @gholami2022 [p. 4] disagree [@a2020; @b2021] and [@c2022;@d2023]; see Section [[#Research Design|Research Design]] and [[#^rq|RQ1]] and [[#^hyp|H2a]]. Quotes “like this” and `batch_static` and **bold** _Null:_ and <span style=\"color:red\">[to do]</span> stay. %% trailing%%\n\nA labelled paragraph with $x_1 = y$ maths. ^sec--datasets\n%%%%\n$$\n  y = \\beta_0 + \\beta_1 x .\n$$\n\n^eq--model\n\n%%%%\nwhere the slope is tested.\n  - first item, which continues here;\n  - second item. ^sec--second\nText directly after the list.\n\n#### Aim.\nThe aim is clear.\n\n```tikz\n\\usetikzlibrary{positioning,calc,decorations.pathreplacing}\n\\begin{document}\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1); % a line\n\\end{tikzpicture}\n\\end{document}\n```\n\n^fig--line\n\n((<tag|Figure)) A line [@oates2006].\n\n\n- **RQ1** Does it? ^rq1\n\n- **H2a** It does. ^hyp2a\n\n^rq\n\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version 1.0, last updated 2026-10-25 00:52). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\startwordcount{design}\n\\section{Research Design}\n\\label{sec:design}\n\\printwordcount{design}\n\n% EV: 0260\nThis is \\emph{an} experiment \\cite[p.~127]{oates2006}, as \\citet{hinton2015} argue. \\Citet[p.~4]{gholami2022} disagree \\cite{a2020, b2021} and \\cite{c2022,d2023}; see Section~\\ref{sec:design} and \\rqref{1} and \\hypref{2a}. Quotes ``like this'' and \\texttt{batch\\_static} and \\textbf{bold} \\textit{Null:} and \\textcolor{red}{[to do]} stay. % trailing\n\n\\phantomsection\\label{sec:datasets}\nA labelled paragraph with $x_1 = y$ maths.\n%\n\\begin{equation}\n  y = \\beta_0 + \\beta_1 x .\n  \\label{eq:model}\n\\end{equation}\n%\nwhere the slope is tested.\n\\begin{itemize}\n  \\item first item, which continues here;\n  \\item \\phantomsection\\label{sec:second}second item.\n\\end{itemize}\nText directly after the list.\n\n\\paragraph{Aim.} The aim is clear.\n\n\\begin{figure}[htbp]\n\\centering\n\\resizebox{\\ifdim\\width>\\linewidth\\linewidth\\else\\width\\fi}{!}{%\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1); % a line\n\\end{tikzpicture}\n}\n\\caption{A line \\cite{oates2006}.}\n\\label{fig:line}\n\\end{figure}\n\n\\begin{enumerate}\n  \\item[\\textbf{RQ1}] \\hypertarget{rq1}{}Does it?\n\n  \\item[\\textbf{H2a}] \\hypertarget{hyp2a}{}It does.\n\\end{enumerate}\n\\stopwordcount\n",
+  "warnings": []
+ },
+ {
+  "name": "synthetic chapter (round trip)",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\nversion: 1.0\nlast_updated: 2026-10-25 00:52\nwordcount: true\n---\n# Research Design\n^sec--design\n\n%% EV: 0260%%\nThis is *an* experiment [@oates2006, p. 127], as @hinton2015 argue. @gholami2022 [p. 4] disagree [@a2020; @b2021] and [@c2022;@d2023]; see Section [[#Research Design|Research Design]] and [[#^rq|RQ1]] and [[#^hyp|H2a]]. Quotes “like this” and `batch_static` and **bold** _Null:_ and <span style=\"color:red\">[to do]</span> stay. %% trailing%%\n\nA labelled paragraph with $x_1 = y$ maths. ^sec--datasets\n%%%%\n$$\n  y = \\beta_0 + \\beta_1 x .\n$$\n\n^eq--model\n\n%%%%\nwhere the slope is tested.\n  - first item, which continues here;\n  - second item. ^sec--second\nText directly after the list.\n\n#### Aim.\nThe aim is clear.\n\n```tikz\n\\usetikzlibrary{positioning,calc,decorations.pathreplacing}\n\\begin{document}\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1); % a line\n\\end{tikzpicture}\n\\end{document}\n```\n\n^fig--line\n\n((<tag|Figure)) A line [@oates2006].\n\n\n- **RQ1** Does it? ^rq1\n\n- **H2a** It does. ^hyp2a\n\n^rq\n\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\nversion: 1.0\nlast_updated: 2026-10-25 00:52\nwordcount: true\n---\n# Research Design\n^sec--design\n\n%% EV: 0260%%\nThis is *an* experiment [@oates2006, p. 127], as @hinton2015 argue. @gholami2022 [p. 4] disagree [@a2020; @b2021] and [@c2022;@d2023]; see Section [[#Research Design|Research Design]] and [[#^rq|RQ1]] and [[#^hyp|H2a]]. Quotes “like this” and `batch_static` and **bold** _Null:_ and <span style=\"color:red\">[to do]</span> stay. %% trailing%%\n\nA labelled paragraph with $x_1 = y$ maths. ^sec--datasets\n%%%%\n$$\n  y = \\beta_0 + \\beta_1 x .\n$$\n\n^eq--model\n\n%%%%\nwhere the slope is tested.\n  - first item, which continues here;\n  - second item. ^sec--second\nText directly after the list.\n\n#### Aim.\nThe aim is clear.\n\n```tikz\n\\usetikzlibrary{positioning,calc,decorations.pathreplacing}\n\\begin{document}\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1); % a line\n\\end{tikzpicture}\n\\end{document}\n```\n\n^fig--line\n\n((<tag|Figure)) A line [@oates2006].\n\n\n- **RQ1** Does it? ^rq1\n\n- **H2a** It does. ^hyp2a\n\n^rq\n\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version 1.0, last updated 2026-10-25 00:52). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\startwordcount{design}\n\\section{Research Design}\n\\label{sec:design}\n\\printwordcount{design}\n\n% EV: 0260\nThis is \\emph{an} experiment \\cite[p.~127]{oates2006}, as \\citet{hinton2015} argue. \\Citet[p.~4]{gholami2022} disagree \\cite{a2020, b2021} and \\cite{c2022,d2023}; see Section~\\ref{sec:design} and \\rqref{1} and \\hypref{2a}. Quotes ``like this'' and \\texttt{batch\\_static} and \\textbf{bold} \\textit{Null:} and \\textcolor{red}{[to do]} stay. % trailing\n\n\\phantomsection\\label{sec:datasets}\nA labelled paragraph with $x_1 = y$ maths.\n%\n\\begin{equation}\n  y = \\beta_0 + \\beta_1 x .\n  \\label{eq:model}\n\\end{equation}\n%\nwhere the slope is tested.\n\\begin{itemize}\n  \\item first item, which continues here;\n  \\item \\phantomsection\\label{sec:second}second item.\n\\end{itemize}\nText directly after the list.\n\n\\paragraph{Aim.} The aim is clear.\n\n\\begin{figure}[htbp]\n\\centering\n\\resizebox{\\ifdim\\width>\\linewidth\\linewidth\\else\\width\\fi}{!}{%\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1); % a line\n\\end{tikzpicture}\n}\n\\caption{A line \\cite{oates2006}.}\n\\label{fig:line}\n\\end{figure}\n\n\\begin{enumerate}\n  \\item[\\textbf{RQ1}] \\hypertarget{rq1}{}Does it?\n\n  \\item[\\textbf{H2a}] \\hypertarget{hyp2a}{}It does.\n\\end{enumerate}\n\\stopwordcount\n",
+  "warnings": []
+ },
+ {
+  "name": "Obsidian-only content",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\nversion: 1.0\nlast_updated: 2026-10-25 00:52\nwordcount: true\n---\n# Research Design\n^sec--design\n> [!info]- Notes for the author\n> not in LaTeX\n\n%% EV: 0260%%\n%%[flag] check this%%\nThis is *an* [[EV-0001]] experiment [@oates2006, p. 127] [❝](zotero://open-pdf/library/items/ABCD1234?annotation=EFGH5678), as @hinton2015 argue. @gholami2022 [p. 4] disagree [@a2020; @b2021] and [@c2022;@d2023]; see Section [[#Research Design|Research Design]] and [[#^rq|RQ1]] and [[#^hyp|H2a]]. Quotes “like this” and `batch_static` and **bold** _Null:_ and <span style=\"color:red\">[to do]</span> stay. %% trailing%%\n\nA labelled paragraph with $x_1 = y$ maths. ^sec--datasets\n%%%%\n$$\n  y = \\beta_0 + \\beta_1 x .\n$$\n\n^eq--model\n\n%%%%\nwhere the slope is tested.\n  - first item, which continues here;\n  - second item. ^sec--second\nText directly after the list.\n\n#### Aim.\nThe aim is clear.\n\n```tikz\n\\usetikzlibrary{positioning,calc,decorations.pathreplacing}\n\\begin{document}\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1); % a line\n\\end{tikzpicture}\n\\end{document}\n```\n\n^fig--line\n\n((<tag|Figure)) A line [@oates2006].\n\n\n- **RQ1** Does it? ^rq1\n\n- **H2a** It does. ^hyp2a\n\n^rq\n\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\nversion: 1.0\nlast_updated: 2026-10-25 00:52\nwordcount: true\n---\n# Research Design\n^sec--design\n> [!info]- Notes for the author\n> not in LaTeX\n\n%% EV: 0260%%\n%%[flag] check this%%\nThis is *an* [[EV-0001]] experiment [@oates2006, p. 127] [❝](zotero://open-pdf/library/items/ABCD1234?annotation=EFGH5678), as @hinton2015 argue. @gholami2022 [p. 4] disagree [@a2020; @b2021] and [@c2022;@d2023]; see Section [[#Research Design|Research Design]] and [[#^rq|RQ1]] and [[#^hyp|H2a]]. Quotes “like this” and `batch_static` and **bold** _Null:_ and <span style=\"color:red\">[to do]</span> stay. %% trailing%%\n\nA labelled paragraph with $x_1 = y$ maths. ^sec--datasets\n%%%%\n$$\n  y = \\beta_0 + \\beta_1 x .\n$$\n\n^eq--model\n\n%%%%\nwhere the slope is tested.\n  - first item, which continues here;\n  - second item. ^sec--second\nText directly after the list.\n\n#### Aim.\nThe aim is clear.\n\n```tikz\n\\usetikzlibrary{positioning,calc,decorations.pathreplacing}\n\\begin{document}\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1); % a line\n\\end{tikzpicture}\n\\end{document}\n```\n\n^fig--line\n\n((<tag|Figure)) A line [@oates2006].\n\n\n- **RQ1** Does it? ^rq1\n\n- **H2a** It does. ^hyp2a\n\n^rq\n\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version 1.0, last updated 2026-10-25 00:52). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\startwordcount{design}\n\\section{Research Design}\n\\label{sec:design}\n\\printwordcount{design}\n\n% EV: 0260\nThis is \\emph{an} experiment \\cite[p.~127]{oates2006}, as \\citet{hinton2015} argue. \\Citet[p.~4]{gholami2022} disagree \\cite{a2020, b2021} and \\cite{c2022,d2023}; see Section~\\ref{sec:design} and \\rqref{1} and \\hypref{2a}. Quotes ``like this'' and \\texttt{batch\\_static} and \\textbf{bold} \\textit{Null:} and \\textcolor{red}{[to do]} stay. % trailing\n\n\\phantomsection\\label{sec:datasets}\nA labelled paragraph with $x_1 = y$ maths.\n%\n\\begin{equation}\n  y = \\beta_0 + \\beta_1 x .\n  \\label{eq:model}\n\\end{equation}\n%\nwhere the slope is tested.\n\\begin{itemize}\n  \\item first item, which continues here;\n  \\item \\phantomsection\\label{sec:second}second item.\n\\end{itemize}\nText directly after the list.\n\n\\paragraph{Aim.} The aim is clear.\n\n\\begin{figure}[htbp]\n\\centering\n\\resizebox{\\ifdim\\width>\\linewidth\\linewidth\\else\\width\\fi}{!}{%\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1); % a line\n\\end{tikzpicture}\n}\n\\caption{A line \\cite{oates2006}.}\n\\label{fig:line}\n\\end{figure}\n\n\\begin{enumerate}\n  \\item[\\textbf{RQ1}] \\hypertarget{rq1}{}Does it?\n\n  \\item[\\textbf{H2a}] \\hypertarget{hyp2a}{}It does.\n\\end{enumerate}\n\\stopwordcount\n",
+  "warnings": []
+ },
+ {
+  "name": "inline 0: [see @a2020, p. 2]",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\n[see @a2020, p. 2]\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\n[see @a2020, p. 2]\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\cite[see][p.~2]{a2020}\n",
+  "warnings": []
+ },
+ {
+  "name": "inline 1: @a2020 found it. @b2021 did not.",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\n@a2020 found it. @b2021 did not.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\n@a2020 found it. @b2021 did not.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\Citet{a2020} found it. \\Citet{b2021} did not.\n",
+  "warnings": []
+ },
+ {
+  "name": "inline 2: as Smith et al. @b2021 say",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\nas Smith et al. @b2021 say\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\nas Smith et al. @b2021 say\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nas Smith et al. \\citet{b2021} say\n",
+  "warnings": []
+ },
+ {
+  "name": "inline 3: A link [[#^sec--design]] and a [site](ht",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\nA link [[#^sec--design]] and a [site](https://example.org).\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\nA link [[#^sec--design]] and a [site](https://example.org).\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nA link \\ref{sec:design} and a \\href{https://example.org}{site}.\n",
+  "warnings": []
+ },
+ {
+  "name": "inline 4: A note^[with *emphasis*].",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\nA note^[with *emphasis*].\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\nA note^[with *emphasis*].\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nA note\\footnote{with \\emph{emphasis}}.\n",
+  "warnings": []
+ },
+ {
+  "name": "inline 5: %% a comment line%%",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\n%% a comment line%%\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\n%% a comment line%%\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n% a comment line\n",
+  "warnings": []
+ },
+ {
+  "name": "inline 6: %%[note] for Obsidian only%%",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\n%%[note] for Obsidian only%%\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\n%%[note] for Obsidian only%%\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n",
+  "warnings": []
+ },
+ {
+  "name": "inline 7: rather than an average [[EV-0215]], [[EV",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\nrather than an average [[EV-0215]], [[EV-0308]], and it calls\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\nrather than an average [[EV-0215]], [[EV-0308]], and it calls\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nrather than an average, and it calls\n",
+  "warnings": []
+ },
+ {
+  "name": "inline 8: as error [[EV-0379]] %%[ev] R-770559a0%%",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\nas error [[EV-0379]] %%[ev] R-770559a0%%. Next\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\nas error [[EV-0379]] %%[ev] R-770559a0%%. Next\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nas error. Next\n",
+  "warnings": []
+ },
+ {
+  "name": "inline 9: smaller (Figure~[[#^sec--design|sec:desi",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\nsmaller (Figure~[[#^sec--design|sec:design]]) [[EV-0300]], [[EV-0229]], [[EV-0136]].\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\nsmaller (Figure~[[#^sec--design|sec:design]]) [[EV-0300]], [[EV-0229]], [[EV-0136]].\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nsmaller (Figure~\\ref{sec:design}).\n",
+  "warnings": []
+ },
+ {
+  "name": "inline 10: as [[3-introduction#^hyp2a|H2a]] and [[#",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\nas [[3-introduction#^hyp2a|H2a]] and [[#^rq1|RQ1]] ask\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\nas [[3-introduction#^hyp2a|H2a]] and [[#^rq1|RQ1]] ask\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nas \\hypref{2a} and \\rqref{1} ask\n",
+  "warnings": []
+ },
+ {
+  "name": "inline 11: As @oates2006 [[EV-0260]] showed.",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\nAs @oates2006 [[EV-0260]] showed.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\nAs @oates2006 [[EV-0260]] showed.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nAs \\citet{oates2006} showed.\n",
+  "warnings": []
+ },
+ {
+  "name": "inline 12: See [a site](https://example.org/#top).",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\nSee [a site](https://example.org/#top).\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\nSee [a site](https://example.org/#top).\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nSee \\href{https://example.org/#top}{a site}.\n",
+  "warnings": []
+ },
+ {
+  "name": "inline 13: [@a; @b, p. 3] and [@a, p. 2; @b, p. 3] ",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\n[@a; @b, p. 3] and [@a, p. 2; @b, p. 3] and [see @a; also @b] and [@a, pp. 4-5]\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\n[@a; @b, p. 3] and [@a, p. 2; @b, p. 3] and [see @a; also @b] and [@a, pp. 4-5]\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n[@a; @b, p. 3] and [@a, p. 2; @b, p. 3] and [see @a; also @b] and [@a, pp. 4-5]\n",
+  "warnings": []
+ },
+ {
+  "name": "inline 14: @Key2020 [p. 4] says, and @k2 [[EV-1]] a",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\n@Key2020 [p. 4] says, and @k2 [[EV-1]] and @k3 [see](https://x.org) and e-mail a@b.org\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\n@Key2020 [p. 4] says, and @k2 [[EV-1]] and @k3 [see](https://x.org) and e-mail a@b.org\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\Citet[p.~4]{Key2020} says, and \\citet{k2} and \\citet{k3} \\href{https://x.org}{see} and e-mail a@b.org\n",
+  "warnings": []
+ },
+ {
+  "name": "inline 15: Text with $a_1 \\$ b$ maths, `code_x {y}`",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\nText with $a_1 \\$ b$ maths, `code_x {y}` and \\% and \\textbf{x} and \\\\ end\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\nText with $a_1 \\$ b$ maths, `code_x {y}` and \\% and \\textbf{x} and \\\\ end\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nText with $a_1 \\$ b$ maths, \\texttt{code\\_x \\{y\\}} and \\% and \\textbf{x} and \\\\ end\n",
+  "warnings": []
+ },
+ {
+  "name": "inline 16: *a **b** c* and **bold *it* x** and _it_",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\n*a **b** c* and **bold *it* x** and _it_ and snake_case_word and _ space and * star and ** open\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\n*a **b** c* and **bold *it* x** and _it_ and snake_case_word and _ space and * star and ** open\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\emph{a \\textbf{b} c} and \\textbf{bold \\emph{it} x} and \\textit{it} and snake_case_word and _ space and * star and ** open\n",
+  "warnings": []
+ },
+ {
+  "name": "inline 17: Quotes “double” and ‘single’ and it’s, w",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\nQuotes “double” and ‘single’ and it’s, with a non breaking space and ünïcödé and 🙂 emoji.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\nQuotes “double” and ‘single’ and it’s, with a non breaking space and ünïcödé and 🙂 emoji.\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nQuotes ``double'' and `single' and it's, with a non breaking space and ünïcödé and 🙂 emoji.\n",
+  "warnings": []
+ },
+ {
+  "name": "inline 18: A <span style=\"color:red\">red</span> and",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\nA <span style=\"color:red\">red</span> and <span style=\"color: blue;\">blue</span> and </span> stray\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\nA <span style=\"color:red\">red</span> and <span style=\"color: blue;\">blue</span> and </span> stray\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nA \\textcolor{red}{red} and \\textcolor{blue}{blue} and </span> stray\n",
+  "warnings": []
+ },
+ {
+  "name": "inline 19: <span style=\"color:green\">never closed",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\n<span style=\"color:green\">never closed\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\n<span style=\"color:green\">never closed\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\textcolor{green}{never closed}\n",
+  "warnings": [
+   "5-methodology.md:4: an unclosed <span>"
+  ]
+ },
+ {
+  "name": "inline 20: a ==highlight== and ~~strike~~ text",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\na ==highlight== and ~~strike~~ text\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\na ==highlight== and ~~strike~~ text\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\na ==highlight== and ~~strike~~ text\n",
+  "warnings": [
+   "5-methodology.md:4: Markdown == (highlight or strike-through) has no LaTeX rule; copied as it is",
+   "5-methodology.md:4: Markdown == (highlight or strike-through) has no LaTeX rule; copied as it is",
+   "5-methodology.md:4: Markdown ~~ (highlight or strike-through) has no LaTeX rule; copied as it is",
+   "5-methodology.md:4: Markdown ~~ (highlight or strike-through) has no LaTeX rule; copied as it is"
+  ]
+ },
+ {
+  "name": "inline 21: embed ![[image.png]] here and ![[never c",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\nembed ![[image.png]] here and ![[never closed\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\nembed ![[image.png]] here and ![[never closed\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nembed  here and \n",
+  "warnings": [
+   "5-methodology.md:4: embedded note or image '![[image.png]]' is left out (no LaTeX equivalent)",
+   "5-methodology.md:4: embedded note or image '' is left out (no LaTeX equivalent)"
+  ]
+ },
+ {
+  "name": "inline 22: a %% mid %% comment and more",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\na %% mid %% comment and more\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\na %% mid %% comment and more\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\na  comment and more % mid \n",
+  "warnings": [
+   "5-methodology.md:4: a %% comment in the middle of a line is moved to the end of the line (LaTeX comments run to the end)"
+  ]
+ },
+ {
+  "name": "inline 23: unclosed %% comment",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\nunclosed %% comment\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\nunclosed %% comment\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nunclosed % comment\n",
+  "warnings": [
+   "5-methodology.md:4: an unclosed %% comment; written as a LaTeX comment to the end of the line"
+  ]
+ },
+ {
+  "name": "inline 24: unclosed %%[tag] comment",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\nunclosed %%[tag] comment\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\nunclosed %%[tag] comment\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nunclosed \n",
+  "warnings": [
+   "5-methodology.md:4: an unclosed %%[tag] comment"
+  ]
+ },
+ {
+  "name": "inline 25: end %%c%%   ",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\nend %%c%%   \n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\nend %%c%%   \n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nend %c\n",
+  "warnings": []
+ },
+ {
+  "name": "inline 26: trailing space %%[ev] x%%y and %%[ev] z%",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\ntrailing space %%[ev] x%%y and %%[ev] z%% w\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\ntrailing space %%[ev] x%%y and %%[ev] z%% w\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\ntrailing space y and w\n",
+  "warnings": []
+ },
+ {
+  "name": "inline 27: See Section [[#Missing heading|x]] and [",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\nSee Section [[#Missing heading|x]] and [[other#Nope]] and [[#^bad----id|x]] and [[#^rq|Q1]]\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\nSee Section [[#Missing heading|x]] and [[other#Nope]] and [[#^bad----id|x]] and [[#^rq|Q1]]\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nSee Section and and and\n",
+  "warnings": [
+   "5-methodology.md:4: [[#Missing heading|x]]: no labelled heading 'Missing heading' in this note",
+   "5-methodology.md:4: [[other#Nope]]: no labelled heading 'Nope' in other",
+   "5-methodology.md:4: block id ^bad----id is not one this script writes (runs of one to three dashes)",
+   "5-methodology.md:4: [[#^rq|Q1]]: a link to the research questions or hypotheses needs the alias RQn or Hn"
+  ]
+ },
+ {
+  "name": "inline 28: As Table [[#^tab--x|tab:x]] and Tables [",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\nAs Table [[#^tab--x|tab:x]] and Tables [[#^tab--y]] and XTable [[#^tab--z]] and Hypotheses [[#^hyp|H1]].\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\nAs Table [[#^tab--x|tab:x]] and Tables [[#^tab--y]] and XTable [[#^tab--z]] and Hypotheses [[#^hyp|H1]].\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nAs Table~\\ref{tab:x} and Tables~\\ref{tab:y} and XTable \\ref{tab:z} and Hypotheses~\\hypref{1}.\n",
+  "warnings": []
+ },
+ {
+  "name": "inline 29: [[#^rq|RQ1]], [[#^hyp|H2a]] and [[3-intr",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\n[[#^rq|RQ1]], [[#^hyp|H2a]] and [[3-introduction#^rq12|RQ12]] and [[#^rqx|x]]\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\n[[#^rq|RQ1]], [[#^hyp|H2a]] and [[3-introduction#^rq12|RQ12]] and [[#^rqx|x]]\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\rqref{1}, \\hypref{2a} and \\rqref{12} and \\ref{rqx}\n",
+  "warnings": []
+ },
+ {
+  "name": "inline 30: a [[Some note]] b [[Some note|alias]] c ",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\na [[Some note]] b [[Some note|alias]] c [[EV-1]],[[EV-2]] d [[EV-3]] , [[EV-4]]\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\na [[Some note]] b [[Some note|alias]] c [[EV-1]],[[EV-2]] d [[EV-3]] , [[EV-4]]\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\na b c d ,\n",
+  "warnings": []
+ },
+ {
+  "name": "inline 31: a footnote^[with [brackets] inside] and ",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\na footnote^[with [brackets] inside] and ^[unclosed and ^ caret\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\na footnote^[with [brackets] inside] and ^[unclosed and ^ caret\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\na footnote\\footnote{with [brackets} inside] and ^[unclosed and ^ caret\n",
+  "warnings": []
+ },
+ {
+  "name": "inline 32: [a [nested] bracket] and [plain] and [@b",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\n[a [nested] bracket] and [plain] and [@bad key] and [x](y) and [unclosed\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\n[a [nested] bracket] and [plain] and [@bad key] and [x](y) and [unclosed\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n[a [nested] bracket] and [plain] and [\\citet{bad} key] and \\href{y}{x} and [unclosed\n",
+  "warnings": []
+ },
+ {
+  "name": "inline 33: @a2020. @b2021? @c2021! e.g. @d2020 and ",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\n@a2020. @b2021? @c2021! e.g. @d2020 and (@e2020) and “@f2020” and Fig. @g2020\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\n@a2020. @b2021? @c2021! e.g. @d2020 and (@e2020) and “@f2020” and Fig. @g2020\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\Citet{a2020}. \\Citet{b2021}? \\Citet{c2021}! e.g. \\citet{d2020} and (\\citet{e2020}) and ``\\citet{f2020}'' and Fig. \\citet{g2020}\n",
+  "warnings": []
+ },
+ {
+  "name": "inline 34: Paragraph with id ^sec--para",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\nParagraph with id ^sec--para\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\nParagraph with id ^sec--para\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\phantomsection\\label{sec:para}\nParagraph with id\n",
+  "warnings": []
+ },
+ {
+  "name": "inline 35: x [link](note.md#Heading) and [g](glossa",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\nx [link](note.md#Heading) and [g](glossary.md#Nope) and [h](https://a.b/c#d) and [z](zotero://select/x)\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\nx [link](note.md#Heading) and [g](glossary.md#Nope) and [h](https://a.b/c#d) and [z](zotero://select/x)\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nx  and \\glslink{nope}{g} and \\href{https://a.b/c#d}{h} and\n",
+  "warnings": [
+   "5-methodology.md:4: [[note#Heading|link]]: no labelled heading 'Heading' in note",
+   "5-methodology.md:4: [[glossary#Nope|g]]: no entry 'Nope' in glossary.md"
+  ]
+ },
+ {
+  "name": "inline 36:   indented paragraph with \\gls{x} and  d",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\n  indented paragraph with \\gls{x} and  double  spaces  \n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\n  indented paragraph with \\gls{x} and  double  spaces  \n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n  indented paragraph with \\gls{x} and  double  spaces  \n",
+  "warnings": []
+ },
+ {
+  "name": "inline 37: [@a1; @b2] and [@a1, p. 2] and [see @a1]",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\n[@a1; @b2] and [@a1, p. 2] and [see @a1] and text ^sec--nbsp\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\n[@a1; @b2] and [@a1, p. 2] and [see @a1] and text ^sec--nbsp\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\phantomsection\\label{sec:nbsp}\n\\cite{a1, b2} and \\cite[p.~2]{a1} and \\cite[see][]{a1} and text\n",
+  "warnings": []
+ },
+ {
+  "name": "inline 38: %% x%%　",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\n%% x%%　\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\n%% x%%　\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n% x\n",
+  "warnings": []
+ },
+ {
+  "name": "inline 39: a ápp. 2 and (p. 3) and pp. 4 and _p. 5",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\na ápp. 2 and (p. 3) and pp. 4 and _p. 5\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\na ápp. 2 and (p. 3) and pp. 4 and _p. 5\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\na ápp. 2 and (p. 3) and pp. 4 and _p. 5\n",
+  "warnings": []
+ },
+ {
+  "name": "bad paragraph id",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\nParagraph with bad id ^a----b\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\nParagraph with bad id ^a----b\n"
+  },
+  "error": "ConversionError: block id ^a----b is not one this script writes (runs of one to three dashes)"
+ },
+ {
+  "name": "heading link and tie",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\n# Research Design\n^sec--design\n\nas in [[#^sec--design|any alias]] and Appendix [[#Research Design|Research Design]]\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\n# Research Design\n^sec--design\n\nas in [[#^sec--design|any alias]] and Appendix [[#Research Design|Research Design]]\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\section{Research Design}\n\\label{sec:design}\n\nas in \\ref{sec:design} and Appendix~\\ref{sec:design}\n",
+  "warnings": []
+ },
+ {
+  "name": "word counts",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\nwordcount: true\n---\n# Research Philosophy\n^sec--philosophy\n\nText.\n\n# Research Methodology\n^sec--methodology\n\nMore.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\nwordcount: true\n---\n# Research Philosophy\n^sec--philosophy\n\nText.\n\n# Research Methodology\n^sec--methodology\n\nMore.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\startwordcount{philosophy}\n\\section{Research Philosophy}\n\\label{sec:philosophy}\n\\printwordcount{philosophy}\n\nText.\n\n\\startwordcount{methodology}\n\\section{Research Methodology}\n\\label{sec:methodology}\n\\printwordcount{methodology}\n\nMore.\n\\stopwordcount\n",
+  "warnings": []
+ },
+ {
+  "name": "word counts (round trip)",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\nversion: ?\nlast_updated: ?\nwordcount: true\n---\n# Research Philosophy\n^sec--philosophy\n\nText.\n\n# Research Methodology\n^sec--methodology\n\nMore.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\nversion: ?\nlast_updated: ?\nwordcount: true\n---\n# Research Philosophy\n^sec--philosophy\n\nText.\n\n# Research Methodology\n^sec--methodology\n\nMore.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\startwordcount{philosophy}\n\\section{Research Philosophy}\n\\label{sec:philosophy}\n\\printwordcount{philosophy}\n\nText.\n\n\\startwordcount{methodology}\n\\section{Research Methodology}\n\\label{sec:methodology}\n\\printwordcount{methodology}\n\nMore.\n\\stopwordcount\n",
+  "warnings": []
+ },
+ {
+  "name": "word count without label",
+  "note": "5-methodology.md",
+  "md": "---\nwordcount: \"true\"\n---\n# Unlabelled Section: Two!\n\nText.\n## Sub\n^sec--sub\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\nwordcount: \"true\"\n---\n# Unlabelled Section: Two!\n\nText.\n## Sub\n^sec--sub\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\startwordcount{unlabelled-section-two}\n\\section{Unlabelled Section: Two!}\n\\printwordcount{unlabelled-section-two}\n\nText.\n\\subsection{Sub}\n\\label{sec:sub}\n\\stopwordcount\n",
+  "warnings": [
+   "5-methodology.md:1: a counted section needs a label (a ^sec--name line) to name its word count"
+  ]
+ },
+ {
+  "name": "table",
+  "note": "3-introduction.md",
+  "md": "---\ntex: 3-introduction.tex\n---\nBefore.\n\n| Fruit | Colour | Season | Price |\n| --- | :-: | :-: | --: |\n| Apple (dessert, home grown) | red | autumn | low |\n| Lemon (imported, unwaxed) | yellow | winter | high [@doe2024] |\n\nTable: The fruit of the season, adapted from @doe2024.\n\n^tab--three---class\n\nAfter.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "3-introduction.md": "---\ntex: 3-introduction.tex\n---\nBefore.\n\n| Fruit | Colour | Season | Price |\n| --- | :-: | :-: | --: |\n| Apple (dessert, home grown) | red | autumn | low |\n| Lemon (imported, unwaxed) | yellow | winter | high [@doe2024] |\n\nTable: The fruit of the season, adapted from @doe2024.\n\n^tab--three---class\n\nAfter.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/3-introduction.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nBefore.\n\n\\begin{table}[htbp]\n\\centering\n\\caption{The fruit of the season, adapted from \\citet{doe2024}.}\n\\label{tab:three_class}\n\\small\n\\begin{tabular}{@{}lccr@{}}\n\\toprule\nFruit & Colour & Season & Price \\\\\n\\midrule\nApple (dessert, home grown) & red & autumn & low \\\\\nLemon (imported, unwaxed) & yellow & winter & high \\cite{doe2024} \\\\\n\\bottomrule\n\\end{tabular}\n\\end{table}\nAfter.\n",
+  "warnings": []
+ },
+ {
+  "name": "table (round trip)",
+  "note": "3-introduction.md",
+  "md": "---\ntex: 3-introduction.tex\nversion: ?\nlast_updated: ?\n---\nBefore.\n\n| Fruit | Colour | Season | Price |\n| --- | :-: | :-: | --: |\n| Apple (dessert, home grown) | red | autumn | low |\n| Lemon (imported, unwaxed) | yellow | winter | high [@doe2024] |\n\n^tab--three---class\n\n((<tag|Table)) The fruit of the season, adapted from @doe2024.\n\nAfter.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "3-introduction.md": "---\ntex: 3-introduction.tex\nversion: ?\nlast_updated: ?\n---\nBefore.\n\n| Fruit | Colour | Season | Price |\n| --- | :-: | :-: | --: |\n| Apple (dessert, home grown) | red | autumn | low |\n| Lemon (imported, unwaxed) | yellow | winter | high [@doe2024] |\n\n^tab--three---class\n\n((<tag|Table)) The fruit of the season, adapted from @doe2024.\n\nAfter.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/3-introduction.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nBefore.\n\n\\begin{table}[htbp]\n\\centering\n\\caption{The fruit of the season, adapted from \\citet{doe2024}.}\n\\label{tab:three_class}\n\\small\n\\begin{tabular}{@{}lccr@{}}\n\\toprule\nFruit & Colour & Season & Price \\\\\n\\midrule\nApple (dessert, home grown) & red & autumn & low \\\\\nLemon (imported, unwaxed) & yellow & winter & high \\cite{doe2024} \\\\\n\\bottomrule\n\\end{tabular}\n\\end{table}\nAfter.\n",
+  "warnings": []
+ },
+ {
+  "name": "wide table",
+  "note": "3-introduction.md",
+  "md": "---\ntex: 3-introduction.tex\n---\nBefore.\n\n| Fruit | Colour | Season | Price |\n| --- | :-: | :-: | --: |\n| Apple: a dessert apple grown in an orchard and picked by hand in October | red | autumn | low |\n| Lemon (imported, unwaxed) | yellow | winter | high [@doe2024] |\n\nTable: The fruit of the season, adapted from @doe2024.\n\n^tab--three---class\n\nAfter.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "3-introduction.md": "---\ntex: 3-introduction.tex\n---\nBefore.\n\n| Fruit | Colour | Season | Price |\n| --- | :-: | :-: | --: |\n| Apple: a dessert apple grown in an orchard and picked by hand in October | red | autumn | low |\n| Lemon (imported, unwaxed) | yellow | winter | high [@doe2024] |\n\nTable: The fruit of the season, adapted from @doe2024.\n\n^tab--three---class\n\nAfter.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/3-introduction.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nBefore.\n\n\\begin{table}[htbp]\n\\centering\n\\caption{The fruit of the season, adapted from \\citet{doe2024}.}\n\\label{tab:three_class}\n\\small\n\\begin{tabularx}{\\linewidth}{@{}Yccr@{}}\n\\toprule\nFruit & Colour & Season & Price \\\\\n\\midrule\nApple: a dessert apple grown in an orchard and picked by hand in October & red & autumn & low \\\\\nLemon (imported, unwaxed) & yellow & winter & high \\cite{doe2024} \\\\\n\\bottomrule\n\\end{tabularx}\n\\end{table}\nAfter.\n",
+  "warnings": []
+ },
+ {
+  "name": "wide table (round trip)",
+  "note": "3-introduction.md",
+  "md": "---\ntex: 3-introduction.tex\nversion: ?\nlast_updated: ?\n---\nBefore.\n\n| Fruit | Colour | Season | Price |\n| --- | :-: | :-: | --: |\n| Apple: a dessert apple grown in an orchard and picked by hand in October | red | autumn | low |\n| Lemon (imported, unwaxed) | yellow | winter | high [@doe2024] |\n\n^tab--three---class\n\n((<tag|Table)) The fruit of the season, adapted from @doe2024.\n\nAfter.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "3-introduction.md": "---\ntex: 3-introduction.tex\nversion: ?\nlast_updated: ?\n---\nBefore.\n\n| Fruit | Colour | Season | Price |\n| --- | :-: | :-: | --: |\n| Apple: a dessert apple grown in an orchard and picked by hand in October | red | autumn | low |\n| Lemon (imported, unwaxed) | yellow | winter | high [@doe2024] |\n\n^tab--three---class\n\n((<tag|Table)) The fruit of the season, adapted from @doe2024.\n\nAfter.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/3-introduction.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nBefore.\n\n\\begin{table}[htbp]\n\\centering\n\\caption{The fruit of the season, adapted from \\citet{doe2024}.}\n\\label{tab:three_class}\n\\small\n\\begin{tabularx}{\\linewidth}{@{}Yccr@{}}\n\\toprule\nFruit & Colour & Season & Price \\\\\n\\midrule\nApple: a dessert apple grown in an orchard and picked by hand in October & red & autumn & low \\\\\nLemon (imported, unwaxed) & yellow & winter & high \\cite{doe2024} \\\\\n\\bottomrule\n\\end{tabularx}\n\\end{table}\nAfter.\n",
+  "warnings": []
+ },
+ {
+  "name": "hinted table",
+  "note": "3-introduction.md",
+  "md": "---\ntex: 3-introduction.tex\n---\nBefore.\n\n%%[cols] P{4.4cm}ccc%%\n\n| Fruit | Colour | Season | Price |\n| --- | :-: | :-: | --: |\n| Apple (dessert, home grown) | red | autumn | low |\n| Lemon (imported, unwaxed) | yellow | winter | high [@doe2024] |\n\nTable: The fruit of the season, adapted from @doe2024.\n\n^tab--three---class\n\nAfter.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "3-introduction.md": "---\ntex: 3-introduction.tex\n---\nBefore.\n\n%%[cols] P{4.4cm}ccc%%\n\n| Fruit | Colour | Season | Price |\n| --- | :-: | :-: | --: |\n| Apple (dessert, home grown) | red | autumn | low |\n| Lemon (imported, unwaxed) | yellow | winter | high [@doe2024] |\n\nTable: The fruit of the season, adapted from @doe2024.\n\n^tab--three---class\n\nAfter.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/3-introduction.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nBefore.\n\n\\begin{table}[htbp]\n\\centering\n\\caption{The fruit of the season, adapted from \\citet{doe2024}.}\n\\label{tab:three_class}\n\\small\n\\begin{tabular}{@{}P{4.4cm}ccc@{}}\n\\toprule\nFruit & Colour & Season & Price \\\\\n\\midrule\nApple (dessert, home grown) & red & autumn & low \\\\\nLemon (imported, unwaxed) & yellow & winter & high \\cite{doe2024} \\\\\n\\bottomrule\n\\end{tabular}\n\\end{table}\nAfter.\n",
+  "warnings": []
+ },
+ {
+  "name": "hinted table (round trip)",
+  "note": "3-introduction.md",
+  "md": "---\ntex: 3-introduction.tex\nversion: ?\nlast_updated: ?\n---\nBefore.\n\n%%[cols] P{4.4cm}ccc%%\n\n| Fruit | Colour | Season | Price |\n| --- | :-: | :-: | :-: |\n| Apple (dessert, home grown) | red | autumn | low |\n| Lemon (imported, unwaxed) | yellow | winter | high [@doe2024] |\n\n^tab--three---class\n\n((<tag|Table)) The fruit of the season, adapted from @doe2024.\n\nAfter.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "3-introduction.md": "---\ntex: 3-introduction.tex\nversion: ?\nlast_updated: ?\n---\nBefore.\n\n%%[cols] P{4.4cm}ccc%%\n\n| Fruit | Colour | Season | Price |\n| --- | :-: | :-: | :-: |\n| Apple (dessert, home grown) | red | autumn | low |\n| Lemon (imported, unwaxed) | yellow | winter | high [@doe2024] |\n\n^tab--three---class\n\n((<tag|Table)) The fruit of the season, adapted from @doe2024.\n\nAfter.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/3-introduction.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nBefore.\n\n\\begin{table}[htbp]\n\\centering\n\\caption{The fruit of the season, adapted from \\citet{doe2024}.}\n\\label{tab:three_class}\n\\small\n\\begin{tabular}{@{}P{4.4cm}ccc@{}}\n\\toprule\nFruit & Colour & Season & Price \\\\\n\\midrule\nApple (dessert, home grown) & red & autumn & low \\\\\nLemon (imported, unwaxed) & yellow & winter & high \\cite{doe2024} \\\\\n\\bottomrule\n\\end{tabular}\n\\end{table}\nAfter.\n",
+  "warnings": []
+ },
+ {
+  "name": "sized table",
+  "note": "3-introduction.md",
+  "md": "---\ntex: 3-introduction.tex\n---\nBefore.\n\n%%[size] footnotesize%%\n\n| Fruit | Colour | Season | Price |\n| --- | :-: | :-: | --: |\n| Apple (dessert, home grown) | red | autumn | low |\n| Lemon (imported, unwaxed) | yellow | winter | high [@doe2024] |\n\nTable: The fruit of the season, adapted from @doe2024.\n\n^tab--three---class\n\nAfter.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "3-introduction.md": "---\ntex: 3-introduction.tex\n---\nBefore.\n\n%%[size] footnotesize%%\n\n| Fruit | Colour | Season | Price |\n| --- | :-: | :-: | --: |\n| Apple (dessert, home grown) | red | autumn | low |\n| Lemon (imported, unwaxed) | yellow | winter | high [@doe2024] |\n\nTable: The fruit of the season, adapted from @doe2024.\n\n^tab--three---class\n\nAfter.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/3-introduction.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nBefore.\n\n\\begin{table}[htbp]\n\\centering\n\\caption{The fruit of the season, adapted from \\citet{doe2024}.}\n\\label{tab:three_class}\n\\footnotesize\n\\begin{tabular}{@{}lccr@{}}\n\\toprule\nFruit & Colour & Season & Price \\\\\n\\midrule\nApple (dessert, home grown) & red & autumn & low \\\\\nLemon (imported, unwaxed) & yellow & winter & high \\cite{doe2024} \\\\\n\\bottomrule\n\\end{tabular}\n\\end{table}\nAfter.\n",
+  "warnings": []
+ },
+ {
+  "name": "sized table (round trip)",
+  "note": "3-introduction.md",
+  "md": "---\ntex: 3-introduction.tex\nversion: ?\nlast_updated: ?\n---\nBefore.\n\n%%[size] footnotesize%%\n\n| Fruit | Colour | Season | Price |\n| --- | :-: | :-: | --: |\n| Apple (dessert, home grown) | red | autumn | low |\n| Lemon (imported, unwaxed) | yellow | winter | high [@doe2024] |\n\n^tab--three---class\n\n((<tag|Table)) The fruit of the season, adapted from @doe2024.\n\nAfter.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "3-introduction.md": "---\ntex: 3-introduction.tex\nversion: ?\nlast_updated: ?\n---\nBefore.\n\n%%[size] footnotesize%%\n\n| Fruit | Colour | Season | Price |\n| --- | :-: | :-: | --: |\n| Apple (dessert, home grown) | red | autumn | low |\n| Lemon (imported, unwaxed) | yellow | winter | high [@doe2024] |\n\n^tab--three---class\n\n((<tag|Table)) The fruit of the season, adapted from @doe2024.\n\nAfter.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/3-introduction.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nBefore.\n\n\\begin{table}[htbp]\n\\centering\n\\caption{The fruit of the season, adapted from \\citet{doe2024}.}\n\\label{tab:three_class}\n\\footnotesize\n\\begin{tabular}{@{}lccr@{}}\n\\toprule\nFruit & Colour & Season & Price \\\\\n\\midrule\nApple (dessert, home grown) & red & autumn & low \\\\\nLemon (imported, unwaxed) & yellow & winter & high \\cite{doe2024} \\\\\n\\bottomrule\n\\end{tabular}\n\\end{table}\nAfter.\n",
+  "warnings": []
+ },
+ {
+  "name": "bad size",
+  "note": "3-introduction.md",
+  "md": "---\ntex: 3-introduction.tex\n---\nBefore.\n\n%%[size] huge%%\n\n| Fruit | Colour | Season | Price |\n| --- | :-: | :-: | --: |\n| Apple (dessert, home grown) | red | autumn | low |\n| Lemon (imported, unwaxed) | yellow | winter | high [@doe2024] |\n\nTable: The fruit of the season, adapted from @doe2024.\n\n^tab--three---class\n\nAfter.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "3-introduction.md": "---\ntex: 3-introduction.tex\n---\nBefore.\n\n%%[size] huge%%\n\n| Fruit | Colour | Season | Price |\n| --- | :-: | :-: | --: |\n| Apple (dessert, home grown) | red | autumn | low |\n| Lemon (imported, unwaxed) | yellow | winter | high [@doe2024] |\n\nTable: The fruit of the season, adapted from @doe2024.\n\n^tab--three---class\n\nAfter.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/3-introduction.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nBefore.\n\n\\begin{table}[htbp]\n\\centering\n\\caption{The fruit of the season, adapted from \\citet{doe2024}.}\n\\label{tab:three_class}\n\\small\n\\begin{tabular}{@{}lccr@{}}\n\\toprule\nFruit & Colour & Season & Price \\\\\n\\midrule\nApple (dessert, home grown) & red & autumn & low \\\\\nLemon (imported, unwaxed) & yellow & winter & high \\cite{doe2024} \\\\\n\\bottomrule\n\\end{tabular}\n\\end{table}\nAfter.\n",
+  "warnings": [
+   "3-introduction.md:5: [size] huge is not a font size (normalsize|small|footnotesize|scriptsize|tiny); the automatic size is used"
+  ]
+ },
+ {
+  "name": "tag caption",
+  "note": "3-introduction.md",
+  "md": "---\ntex: 3-introduction.tex\n---\nBefore.\n\n| Fruit | Colour | Season | Price |\n| --- | :-: | :-: | --: |\n| Apple (dessert, home grown) | red | autumn | low |\n| Lemon (imported, unwaxed) | yellow | winter | high [@doe2024] |\n\n^tab--three---class\n\n((<tag|Table)) The fruit, with \\| and [FNRATE](glossary.md#FNRATE) $x|y$.\n\nAfter.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "3-introduction.md": "---\ntex: 3-introduction.tex\n---\nBefore.\n\n| Fruit | Colour | Season | Price |\n| --- | :-: | :-: | --: |\n| Apple (dessert, home grown) | red | autumn | low |\n| Lemon (imported, unwaxed) | yellow | winter | high [@doe2024] |\n\n^tab--three---class\n\n((<tag|Table)) The fruit, with \\| and [FNRATE](glossary.md#FNRATE) $x|y$.\n\nAfter.\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/3-introduction.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nBefore.\n\n\\begin{table}[htbp]\n\\centering\n\\caption{The fruit, with \\| and \\gls{FNRATE} $x|y$.}\n\\label{tab:three_class}\n\\small\n\\begin{tabular}{@{}lccr@{}}\n\\toprule\nFruit & Colour & Season & Price \\\\\n\\midrule\nApple (dessert, home grown) & red & autumn & low \\\\\nLemon (imported, unwaxed) & yellow & winter & high \\cite{doe2024} \\\\\n\\bottomrule\n\\end{tabular}\n\\end{table}\nAfter.\n",
+  "warnings": [
+   "3-introduction.md:13: a caption line holds \"|\" (the Tags plugin then rewrites it in live preview); write a glossary link as [NetIDS](glossary.md#NetIDS)"
+  ]
+ },
+ {
+  "name": "tag caption (round trip)",
+  "note": "3-introduction.md",
+  "md": "---\ntex: 3-introduction.tex\nversion: ?\nlast_updated: ?\n---\nBefore.\n\n| Fruit | Colour | Season | Price |\n| --- | :-: | :-: | --: |\n| Apple (dessert, home grown) | red | autumn | low |\n| Lemon (imported, unwaxed) | yellow | winter | high [@doe2024] |\n\n^tab--three---class\n\n((<tag|Table)) The fruit, with \\| and [[glossary#FNRATE|FNRATE]] $x|y$.\n\nAfter.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "3-introduction.md": "---\ntex: 3-introduction.tex\nversion: ?\nlast_updated: ?\n---\nBefore.\n\n| Fruit | Colour | Season | Price |\n| --- | :-: | :-: | --: |\n| Apple (dessert, home grown) | red | autumn | low |\n| Lemon (imported, unwaxed) | yellow | winter | high [@doe2024] |\n\n^tab--three---class\n\n((<tag|Table)) The fruit, with \\| and [[glossary#FNRATE|FNRATE]] $x|y$.\n\nAfter.\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/3-introduction.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nBefore.\n\n\\begin{table}[htbp]\n\\centering\n\\caption{The fruit, with \\| and \\gls{FNRATE} $x|y$.}\n\\label{tab:three_class}\n\\small\n\\begin{tabular}{@{}lccr@{}}\n\\toprule\nFruit & Colour & Season & Price \\\\\n\\midrule\nApple (dessert, home grown) & red & autumn & low \\\\\nLemon (imported, unwaxed) & yellow & winter & high \\cite{doe2024} \\\\\n\\bottomrule\n\\end{tabular}\n\\end{table}\nAfter.\n",
+  "warnings": [
+   "3-introduction.md:15: a caption line holds \"|\" (the Tags plugin then rewrites it in live preview); write a glossary link as [NetIDS](glossary.md#NetIDS)"
+  ]
+ },
+ {
+  "name": "caption with pipe",
+  "note": "3-introduction.md",
+  "md": "---\ntex: 3-introduction.tex\n---\nBefore.\n\n| Fruit | Colour | Season | Price |\n| --- | :-: | :-: | --: |\n| Apple (dessert, home grown) | red | autumn | low |\n| Lemon (imported, unwaxed) | yellow | winter | high [@doe2024] |\n\n^tab--three---class\n\n((<tag|Table)) The [[glossary#FNRATE|FNRATE]].\n\nAfter.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "3-introduction.md": "---\ntex: 3-introduction.tex\n---\nBefore.\n\n| Fruit | Colour | Season | Price |\n| --- | :-: | :-: | --: |\n| Apple (dessert, home grown) | red | autumn | low |\n| Lemon (imported, unwaxed) | yellow | winter | high [@doe2024] |\n\n^tab--three---class\n\n((<tag|Table)) The [[glossary#FNRATE|FNRATE]].\n\nAfter.\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/3-introduction.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nBefore.\n\n\\begin{table}[htbp]\n\\centering\n\\caption{The \\gls{FNRATE}.}\n\\label{tab:three_class}\n\\small\n\\begin{tabular}{@{}lccr@{}}\n\\toprule\nFruit & Colour & Season & Price \\\\\n\\midrule\nApple (dessert, home grown) & red & autumn & low \\\\\nLemon (imported, unwaxed) & yellow & winter & high \\cite{doe2024} \\\\\n\\bottomrule\n\\end{tabular}\n\\end{table}\nAfter.\n",
+  "warnings": [
+   "3-introduction.md:13: a caption line holds \"|\" (the Tags plugin then rewrites it in live preview); write a glossary link as [NetIDS](glossary.md#NetIDS)"
+  ]
+ },
+ {
+  "name": "table without caption or alignment",
+  "note": "5-methodology.md",
+  "md": "| a | b |\n| c | d | e |\n\nText.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "| a | b |\n| c | d | e |\n\nText.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\begin{tabular}{@{}ll@{}}\n\\toprule\na & b \\\\\n\\midrule\nc & d \\\\\n\\bottomrule\n\\end{tabular}\n\nText.\n",
+  "warnings": [
+   "5-methodology.md:1: a table needs its alignment row (| --- | :-: |) under the header row",
+   "5-methodology.md:1: a table without a caption line is written as a bare tabular, not a float"
+  ]
+ },
+ {
+  "name": "six columns",
+  "note": "5-methodology.md",
+  "md": "| a | b | c | d | e | f |\n| - | - | - | - | - | - |\n| 1 | 2 | 3 | 4 | 5 |\n\n^tab--six\n\n((<tag|Caption|#000000|#ffffff)) Six.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "| a | b | c | d | e | f |\n| - | - | - | - | - | - |\n| 1 | 2 | 3 | 4 | 5 |\n\n^tab--six\n\n((<tag|Caption|#000000|#ffffff)) Six.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\begin{table}[htbp]\n\\centering\n\\caption{Six.}\n\\label{tab:six}\n\\scriptsize\n\\begin{tabular}{@{}llllll@{}}\n\\toprule\na & b & c & d & e & f \\\\\n\\midrule\n1 & 2 & 3 & 4 & 5 &  \\\\\n\\bottomrule\n\\end{tabular}\n\\end{table}\n",
+  "warnings": []
+ },
+ {
+  "name": "six columns (round trip)",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\nversion: ?\nlast_updated: ?\n---\n| a | b | c | d | e | f |\n| --- | --- | --- | --- | --- | --- |\n| 1 | 2 | 3 | 4 | 5 |  |\n\n^tab--six\n\n((<tag|Table)) Six.\n\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\nversion: ?\nlast_updated: ?\n---\n| a | b | c | d | e | f |\n| --- | --- | --- | --- | --- | --- |\n| 1 | 2 | 3 | 4 | 5 |  |\n\n^tab--six\n\n((<tag|Table)) Six.\n\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\begin{table}[htbp]\n\\centering\n\\caption{Six.}\n\\label{tab:six}\n\\scriptsize\n\\begin{tabular}{@{}llllll@{}}\n\\toprule\na & b & c & d & e & f \\\\\n\\midrule\n1 & 2 & 3 & 4 & 5 &  \\\\\n\\bottomrule\n\\end{tabular}\n\\end{table}\n",
+  "warnings": []
+ },
+ {
+  "name": "table caption without id",
+  "note": "5-methodology.md",
+  "md": "| a |\n| --- |\n| 1 |\n\n((<tag|Table)) No id.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "| a |\n| --- |\n| 1 |\n\n((<tag|Table)) No id.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\begin{table}[htbp]\n\\centering\n\\caption{No id.}\n\\small\n\\begin{tabular}{@{}l@{}}\n\\toprule\na \\\\\n\\midrule\n1 \\\\\n\\bottomrule\n\\end{tabular}\n\\end{table}\n",
+  "warnings": [
+   "5-methodology.md:1: a table with a caption but no ^tab--name id has no label to refer to"
+  ]
+ },
+ {
+  "name": "labelled list",
+  "note": "3-introduction.md",
+  "md": "---\ntex: 3-introduction.tex\n---\n- **RQ1** Does increasing the ratio increase \\gls{FNRATE}? ^rq1\n%% This is deliberately imprecise.%%\n- **H2a** _Null:_ It does not. _Alternative:_ It does. (RQ1) ^hyp2a\n\n^rq\n\nAfter.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "3-introduction.md": "---\ntex: 3-introduction.tex\n---\n- **RQ1** Does increasing the ratio increase \\gls{FNRATE}? ^rq1\n%% This is deliberately imprecise.%%\n- **H2a** _Null:_ It does not. _Alternative:_ It does. (RQ1) ^hyp2a\n\n^rq\n\nAfter.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/3-introduction.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\begin{enumerate}\n  \\item[\\textbf{RQ1}] \\hypertarget{rq1}{}Does increasing the ratio increase \\gls{FNRATE}?\n% This is deliberately imprecise.\n  \\item[\\textbf{H2a}] \\hypertarget{hyp2a}{}\\textit{Null:} It does not. \\textit{Alternative:} It does. (RQ1)\n\\end{enumerate}\nAfter.\n",
+  "warnings": []
+ },
+ {
+  "name": "labelled list (round trip)",
+  "note": "3-introduction.md",
+  "md": "---\ntex: 3-introduction.tex\nversion: ?\nlast_updated: ?\n---\n- **RQ1** Does increasing the ratio increase \\gls{FNRATE}? ^rq1\n%% This is deliberately imprecise.%%\n- **H2a** _Null:_ It does not. _Alternative:_ It does. (RQ1) ^hyp2a\n\n^rq\n\nAfter.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "3-introduction.md": "---\ntex: 3-introduction.tex\nversion: ?\nlast_updated: ?\n---\n- **RQ1** Does increasing the ratio increase \\gls{FNRATE}? ^rq1\n%% This is deliberately imprecise.%%\n- **H2a** _Null:_ It does not. _Alternative:_ It does. (RQ1) ^hyp2a\n\n^rq\n\nAfter.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/3-introduction.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\begin{enumerate}\n  \\item[\\textbf{RQ1}] \\hypertarget{rq1}{}Does increasing the ratio increase \\gls{FNRATE}?\n% This is deliberately imprecise.\n  \\item[\\textbf{H2a}] \\hypertarget{hyp2a}{}\\textit{Null:} It does not. \\textit{Alternative:} It does. (RQ1)\n\\end{enumerate}\nAfter.\n",
+  "warnings": []
+ },
+ {
+  "name": "labelled list with blanks and tags",
+  "note": "3-introduction.md",
+  "md": "- **RQ1** One ^rq1\n\n%%[flag] x%%\n  %% indented%%\n- **RQ2** Two ^rq2\n^rq\nText.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "3-introduction.md": "- **RQ1** One ^rq1\n\n%%[flag] x%%\n  %% indented%%\n- **RQ2** Two ^rq2\n^rq\nText.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/3-introduction.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\begin{enumerate}\n  \\item[\\textbf{RQ1}] \\hypertarget{rq1}{}One\n\n  % indented\n  \\item[\\textbf{RQ2}] \\hypertarget{rq2}{}Two\n\\end{enumerate}\nText.\n",
+  "warnings": []
+ },
+ {
+  "name": "bold item without id",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\n- **Bold** but no id\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\n- **Bold** but no id\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\begin{itemize}\n\\item \\textbf{Bold} but no id\n\\end{itemize}\n",
+  "warnings": []
+ },
+ {
+  "name": "bold item without id (round trip)",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\nversion: ?\nlast_updated: ?\n---\n- **Bold** but no id\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\nversion: ?\nlast_updated: ?\n---\n- **Bold** but no id\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\begin{itemize}\n\\item \\textbf{Bold} but no id\n\\end{itemize}\n",
+  "warnings": []
+ },
+ {
+  "name": "lists",
+  "note": "5-methodology.md",
+  "md": "- one\n- two ^sec--two\n1. three\n2. four\n  - nested\n\n10. ten\n-not a list\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "- one\n- two ^sec--two\n1. three\n2. four\n  - nested\n\n10. ten\n-not a list\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\begin{itemize}\n\\item one\n\\item \\phantomsection\\label{sec:two}two\n\\end{itemize}\n\\begin{enumerate}\n\\item three\n\\item four\n\\end{enumerate}\n\\begin{itemize}\n  \\item nested\n\\end{itemize}\n\n\\begin{enumerate}\n\\item ten\n\\end{enumerate}\n-not a list\n",
+  "warnings": []
+ },
+ {
+  "name": "equations",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\n$$\n  y = x .\n$$\n\n^eq--model\n\n$$\n\\begin{align}\n  a &= b\n\\end{align}\n$$\n\n^eq--al\n\n$$\nz\n$$\nEnd.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\n$$\n  y = x .\n$$\n\n^eq--model\n\n$$\n\\begin{align}\n  a &= b\n\\end{align}\n$$\n\n^eq--al\n\n$$\nz\n$$\nEnd.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\begin{equation}\n  y = x .\n  \\label{eq:model}\n\\end{equation}\n\\begin{align}\n  a &= b\n  \\label{eq:al}\n\\end{align}\n\\[\nz\n\\]\nEnd.\n",
+  "warnings": []
+ },
+ {
+  "name": "equations (round trip)",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\nversion: ?\nlast_updated: ?\n---\n$$\n  y = x .\n$$\n\n^eq--model\n\n$$\n\\begin{align}\n  a &= b\n\\end{align}\n$$\n\n^eq--al\n\n$$\nz\n$$\nEnd.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\nversion: ?\nlast_updated: ?\n---\n$$\n  y = x .\n$$\n\n^eq--model\n\n$$\n\\begin{align}\n  a &= b\n\\end{align}\n$$\n\n^eq--al\n\n$$\nz\n$$\nEnd.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\begin{equation}\n  y = x .\n  \\label{eq:model}\n\\end{equation}\n\\begin{align}\n  a &= b\n  \\label{eq:al}\n\\end{align}\n\\[\nz\n\\]\nEnd.\n",
+  "warnings": []
+ },
+ {
+  "name": "equation forms",
+  "note": "5-methodology.md",
+  "md": "$$ x = 1 $$\n$$x$$\n\n$$\nx \\label{eq:own}\n$$\n\n^eq--own\n\n$$\nunclosed\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "$$ x = 1 $$\n$$x$$\n\n$$\nx \\label{eq:own}\n$$\n\n^eq--own\n\n$$\nunclosed\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\[\nx = 1\n\\]\n\\[\nx\n\\]\n\n\\[\nx \\label{eq:own}\n\\]\n\\[\nunclosed\n\\]\n",
+  "warnings": []
+ },
+ {
+  "name": "figure",
+  "note": "4-literature_review.md",
+  "md": "---\ntex: 4-literature_review.tex\n---\n```tikz\n\\usetikzlibrary{positioning,calc,decorations.pathreplacing}\n\\begin{document}\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1);\n\\end{tikzpicture}\n\\end{document}\n```\n\n^fig--line\n\n((<tag|Figure)) A line [@oates2006].\n\nAfter.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "4-literature_review.md": "---\ntex: 4-literature_review.tex\n---\n```tikz\n\\usetikzlibrary{positioning,calc,decorations.pathreplacing}\n\\begin{document}\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1);\n\\end{tikzpicture}\n\\end{document}\n```\n\n^fig--line\n\n((<tag|Figure)) A line [@oates2006].\n\nAfter.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/4-literature_review.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\begin{figure}[htbp]\n\\centering\n\\resizebox{\\ifdim\\width>\\linewidth\\linewidth\\else\\width\\fi}{!}{%\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1);\n\\end{tikzpicture}\n}\n\\caption{A line \\cite{oates2006}.}\n\\label{fig:line}\n\\end{figure}\nAfter.\n",
+  "warnings": []
+ },
+ {
+  "name": "figure (round trip)",
+  "note": "4-literature_review.md",
+  "md": "---\ntex: 4-literature_review.tex\nversion: ?\nlast_updated: ?\n---\n```tikz\n\\usetikzlibrary{positioning,calc,decorations.pathreplacing}\n\\begin{document}\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1);\n\\end{tikzpicture}\n\\end{document}\n```\n\n^fig--line\n\n((<tag|Figure)) A line [@oates2006].\n\nAfter.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "4-literature_review.md": "---\ntex: 4-literature_review.tex\nversion: ?\nlast_updated: ?\n---\n```tikz\n\\usetikzlibrary{positioning,calc,decorations.pathreplacing}\n\\begin{document}\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1);\n\\end{tikzpicture}\n\\end{document}\n```\n\n^fig--line\n\n((<tag|Figure)) A line [@oates2006].\n\nAfter.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/4-literature_review.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\begin{figure}[htbp]\n\\centering\n\\resizebox{\\ifdim\\width>\\linewidth\\linewidth\\else\\width\\fi}{!}{%\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1);\n\\end{tikzpicture}\n}\n\\caption{A line \\cite{oates2006}.}\n\\label{fig:line}\n\\end{figure}\nAfter.\n",
+  "warnings": []
+ },
+ {
+  "name": "figure caption form 0",
+  "note": "4-literature_review.md",
+  "md": "---\ntex: 4-literature_review.tex\n---\n```tikz\n\\usetikzlibrary{positioning,calc,decorations.pathreplacing}\n\\begin{document}\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1);\n\\end{tikzpicture}\n\\end{document}\n```\n\n^fig--line\n\n((<tag|Caption|#000000|#ffffff)) A line [@oates2006].\n\nAfter.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "4-literature_review.md": "---\ntex: 4-literature_review.tex\n---\n```tikz\n\\usetikzlibrary{positioning,calc,decorations.pathreplacing}\n\\begin{document}\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1);\n\\end{tikzpicture}\n\\end{document}\n```\n\n^fig--line\n\n((<tag|Caption|#000000|#ffffff)) A line [@oates2006].\n\nAfter.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/4-literature_review.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\begin{figure}[htbp]\n\\centering\n\\resizebox{\\ifdim\\width>\\linewidth\\linewidth\\else\\width\\fi}{!}{%\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1);\n\\end{tikzpicture}\n}\n\\caption{A line \\cite{oates2006}.}\n\\label{fig:line}\n\\end{figure}\nAfter.\n",
+  "warnings": []
+ },
+ {
+  "name": "figure caption form 1",
+  "note": "4-literature_review.md",
+  "md": "---\ntex: 4-literature_review.tex\n---\n```tikz\n\\usetikzlibrary{positioning,calc,decorations.pathreplacing}\n\\begin{document}\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1);\n\\end{tikzpicture}\n\\end{document}\n```\n\n^fig--line\n\n^caption - A line [@oates2006].\n\nAfter.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "4-literature_review.md": "---\ntex: 4-literature_review.tex\n---\n```tikz\n\\usetikzlibrary{positioning,calc,decorations.pathreplacing}\n\\begin{document}\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1);\n\\end{tikzpicture}\n\\end{document}\n```\n\n^fig--line\n\n^caption - A line [@oates2006].\n\nAfter.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/4-literature_review.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\begin{figure}[htbp]\n\\centering\n\\resizebox{\\ifdim\\width>\\linewidth\\linewidth\\else\\width\\fi}{!}{%\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1);\n\\end{tikzpicture}\n}\n\\caption{A line \\cite{oates2006}.}\n\\label{fig:line}\n\\end{figure}\nAfter.\n",
+  "warnings": []
+ },
+ {
+  "name": "figure caption form 2",
+  "note": "4-literature_review.md",
+  "md": "---\ntex: 4-literature_review.tex\n---\n```tikz\n\\usetikzlibrary{positioning,calc,decorations.pathreplacing}\n\\begin{document}\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1);\n\\end{tikzpicture}\n\\end{document}\n```\n\n^fig--line\n\n^caption: A line [@oates2006].\n\nAfter.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "4-literature_review.md": "---\ntex: 4-literature_review.tex\n---\n```tikz\n\\usetikzlibrary{positioning,calc,decorations.pathreplacing}\n\\begin{document}\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1);\n\\end{tikzpicture}\n\\end{document}\n```\n\n^fig--line\n\n^caption: A line [@oates2006].\n\nAfter.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/4-literature_review.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\begin{figure}[htbp]\n\\centering\n\\resizebox{\\ifdim\\width>\\linewidth\\linewidth\\else\\width\\fi}{!}{%\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1);\n\\end{tikzpicture}\n}\n\\caption{A line \\cite{oates2006}.}\n\\label{fig:line}\n\\end{figure}\nAfter.\n",
+  "warnings": []
+ },
+ {
+  "name": "figure caption form 3",
+  "note": "4-literature_review.md",
+  "md": "---\ntex: 4-literature_review.tex\n---\n```tikz\n\\usetikzlibrary{positioning,calc,decorations.pathreplacing}\n\\begin{document}\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1);\n\\end{tikzpicture}\n\\end{document}\n```\n\nFigure: A line [@oates2006]. ^fig--line\n\nAfter.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "4-literature_review.md": "---\ntex: 4-literature_review.tex\n---\n```tikz\n\\usetikzlibrary{positioning,calc,decorations.pathreplacing}\n\\begin{document}\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1);\n\\end{tikzpicture}\n\\end{document}\n```\n\nFigure: A line [@oates2006]. ^fig--line\n\nAfter.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/4-literature_review.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\begin{figure}[htbp]\n\\centering\n\\resizebox{\\ifdim\\width>\\linewidth\\linewidth\\else\\width\\fi}{!}{%\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1);\n\\end{tikzpicture}\n}\n\\caption{A line \\cite{oates2006}.}\n\\label{fig:line}\n\\end{figure}\nAfter.\n",
+  "warnings": []
+ },
+ {
+  "name": "figure caption form 4",
+  "note": "4-literature_review.md",
+  "md": "---\ntex: 4-literature_review.tex\n---\n```tikz\n\\usetikzlibrary{positioning,calc,decorations.pathreplacing}\n\\begin{document}\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1);\n\\end{tikzpicture}\n\\end{document}\n```\n\nFigure: A line.\n\n^fig--line\n\nAfter.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "4-literature_review.md": "---\ntex: 4-literature_review.tex\n---\n```tikz\n\\usetikzlibrary{positioning,calc,decorations.pathreplacing}\n\\begin{document}\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1);\n\\end{tikzpicture}\n\\end{document}\n```\n\nFigure: A line.\n\n^fig--line\n\nAfter.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/4-literature_review.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\begin{figure}[htbp]\n\\centering\n\\resizebox{\\ifdim\\width>\\linewidth\\linewidth\\else\\width\\fi}{!}{%\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1);\n\\end{tikzpicture}\n}\n\\caption{A line.}\n\\label{fig:line}\n\\end{figure}\nAfter.\n",
+  "warnings": []
+ },
+ {
+  "name": "resized figure",
+  "note": "4-literature_review.md",
+  "md": "---\ntex: 4-literature_review.tex\n---\n%%[resize] \\textwidth%%\n\n```tikz\n\\usetikzlibrary{positioning,calc,decorations.pathreplacing}\n\\begin{document}\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1);\n\\end{tikzpicture}\n\\end{document}\n```\n\n^fig--line\n\n((<tag|Figure)) A line [@oates2006].\n\nAfter.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "4-literature_review.md": "---\ntex: 4-literature_review.tex\n---\n%%[resize] \\textwidth%%\n\n```tikz\n\\usetikzlibrary{positioning,calc,decorations.pathreplacing}\n\\begin{document}\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1);\n\\end{tikzpicture}\n\\end{document}\n```\n\n^fig--line\n\n((<tag|Figure)) A line [@oates2006].\n\nAfter.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/4-literature_review.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\begin{figure}[htbp]\n\\centering\n\\resizebox{\\textwidth}{!}{%\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1);\n\\end{tikzpicture}\n}\n\\caption{A line \\cite{oates2006}.}\n\\label{fig:line}\n\\end{figure}\nAfter.\n",
+  "warnings": []
+ },
+ {
+  "name": "resized figure (round trip)",
+  "note": "4-literature_review.md",
+  "md": "---\ntex: 4-literature_review.tex\nversion: ?\nlast_updated: ?\n---\n%%[resize] \\textwidth%%\n\n```tikz\n\\usetikzlibrary{positioning,calc,decorations.pathreplacing}\n\\begin{document}\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1);\n\\end{tikzpicture}\n\\end{document}\n```\n\n^fig--line\n\n((<tag|Figure)) A line [@oates2006].\n\nAfter.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "4-literature_review.md": "---\ntex: 4-literature_review.tex\nversion: ?\nlast_updated: ?\n---\n%%[resize] \\textwidth%%\n\n```tikz\n\\usetikzlibrary{positioning,calc,decorations.pathreplacing}\n\\begin{document}\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1);\n\\end{tikzpicture}\n\\end{document}\n```\n\n^fig--line\n\n((<tag|Figure)) A line [@oates2006].\n\nAfter.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/4-literature_review.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\begin{figure}[htbp]\n\\centering\n\\resizebox{\\textwidth}{!}{%\n\\begin{tikzpicture}\n  \\draw (0,0) -- (1,1);\n\\end{tikzpicture}\n}\n\\caption{A line \\cite{oates2006}.}\n\\label{fig:line}\n\\end{figure}\nAfter.\n",
+  "warnings": []
+ },
+ {
+  "name": "tikz extras",
+  "note": "4-literature_review.md",
+  "md": "```tikz\n\\usepackage{pgfplots}\n\\usetikzlibrary{arrows.meta, calc}\n\\begin{document}\n\\begin{tikzpicture}\n\\end{tikzpicture}\n\\end{document}\n```\n\n((<tag|Figure)) No id.\n\n```tikz\n\\begin{tikzpicture}\n\\end{tikzpicture}\n```\nText.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "4-literature_review.md": "```tikz\n\\usepackage{pgfplots}\n\\usetikzlibrary{arrows.meta, calc}\n\\begin{document}\n\\begin{tikzpicture}\n\\end{tikzpicture}\n\\end{document}\n```\n\n((<tag|Figure)) No id.\n\n```tikz\n\\begin{tikzpicture}\n\\end{tikzpicture}\n```\nText.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/4-literature_review.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\begin{figure}[htbp]\n\\centering\n\\resizebox{\\ifdim\\width>\\linewidth\\linewidth\\else\\width\\fi}{!}{%\n\\begin{tikzpicture}\n\\end{tikzpicture}\n}\n\\caption{No id.}\n\\end{figure}\n\\begin{tikzpicture}\n\\end{tikzpicture}\nText.\n",
+  "warnings": [
+   "4-literature_review.md:1: \\usepackage{pgfplots} is only for TikZJax; load it in the preamble for LaTeX too",
+   "4-literature_review.md:1: \\usetikzlibrary{arrows.meta, calc} is only for TikZJax; load it in the preamble for LaTeX too",
+   "4-literature_review.md:1: a figure with a caption but no ^fig--name id has no label to refer to"
+  ]
+ },
+ {
+  "name": "fences",
+  "note": "5-methodology.md",
+  "md": "```python\nprint(1)\n```\n```latex\n\\foo\n```\n```\nunclosed\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "```python\nprint(1)\n```\n```latex\n\\foo\n```\n```\nunclosed\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\begin{verbatim}\nprint(1)\n\\end{verbatim}\n\\foo\n\\begin{verbatim}\nunclosed\n\\end{verbatim}\n",
+  "warnings": [
+   "5-methodology.md:1: a ```python block is written as verbatim",
+   "5-methodology.md:4: a ```latex block in a chapter note (copied as it is); give it a Markdown form: a label on a paragraph is a trailing ^sec--name, a comment a %% %% line",
+   "5-methodology.md:7: a ``` block is written as verbatim"
+  ]
+ },
+ {
+  "name": "commands, starred heading, listing",
+  "note": "9-appendix.md",
+  "md": "---\ntex: 9-appendices.tex\n---\n# Appendices {-}\n^app--appendices\n%% a rule%%\n^FloatBarrier\n\nText.\n\nListing: The core of the harness. ^lst--bench\n\nEnd.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "9-appendix.md": "---\ntex: 9-appendices.tex\n---\n# Appendices {-}\n^app--appendices\n%% a rule%%\n^FloatBarrier\n\nText.\n\nListing: The core of the harness. ^lst--bench\n\nEnd.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/9-appendix.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\section*{Appendices}\n\\phantomsection\\addcontentsline{toc}{section}{Appendices}\n\\label{app:appendices}\n% a rule\n\\FloatBarrier\n\nText.\n\n\\begin{handtyped}[htbp]\n\\handtypedcode{bench}\n\\caption{The core of the harness.}\n\\label{lst:bench}\n\\end{handtyped}\nEnd.\n",
+  "warnings": []
+ },
+ {
+  "name": "commands, starred heading, listing (round trip)",
+  "note": "9-appendix.md",
+  "md": "---\ntex: 9-appendices.tex\nversion: ?\nlast_updated: ?\n---\n# Appendices {-}\n^app--appendices\n%% a rule%%\n^FloatBarrier\n\nText.\n\nListing: The core of the harness. ^lst--bench\n\nEnd.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "9-appendix.md": "---\ntex: 9-appendices.tex\nversion: ?\nlast_updated: ?\n---\n# Appendices {-}\n^app--appendices\n%% a rule%%\n^FloatBarrier\n\nText.\n\nListing: The core of the harness. ^lst--bench\n\nEnd.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/9-appendix.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\section*{Appendices}\n\\phantomsection\\addcontentsline{toc}{section}{Appendices}\n\\label{app:appendices}\n% a rule\n\\FloatBarrier\n\nText.\n\n\\begin{handtyped}[htbp]\n\\handtypedcode{bench}\n\\caption{The core of the harness.}\n\\label{lst:bench}\n\\end{handtyped}\nEnd.\n",
+  "warnings": []
+ },
+ {
+  "name": "preamble commands",
+  "note": "9-appendix.md",
+  "md": "^startappendices\n^printterms\n^subappendix\n^withargs\n^unknown\n\n^blockid\n\n## Starred {-}\n#### Para {-}\nText after.\n#### Labelled\n^sec--lab\nText.\n##### Five\n###### Six\n####### Seven\n#### Title\n\n#hashtag\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "9-appendix.md": "^startappendices\n^printterms\n^subappendix\n^withargs\n^unknown\n\n^blockid\n\n## Starred {-}\n#### Para {-}\nText after.\n#### Labelled\n^sec--lab\nText.\n##### Five\n###### Six\n####### Seven\n#### Title\n\n#hashtag\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/9-appendix.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\startappendices\n\\printterms\n\\subappendix\n\\subsection*{Starred}\n\\phantomsection\\addcontentsline{toc}{subsection}{Starred}\n\\paragraph*{Para}\n\\phantomsection\\addcontentsline{toc}{paragraph}{Para} Text after.\n\\paragraph{Labelled}\n\\label{sec:lab}\nText.\n\\paragraph{Five}\n\\paragraph{Six}\n####### Seven\n\\paragraph{Title}\n\n#hashtag\n",
+  "warnings": [
+   "9-appendix.md:15: heading level 5 has no LaTeX rule; written as \\paragraph",
+   "9-appendix.md:16: heading level 6 has no LaTeX rule; written as \\paragraph"
+  ]
+ },
+ {
+  "name": "listing forms",
+  "note": "9-appendix.md",
+  "md": "Listing: no id\n\nListing: wrong ^tab--x\n\nListing: later\n\n^lst--later\n\nText.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "9-appendix.md": "Listing: no id\n\nListing: wrong ^tab--x\n\nListing: later\n\n^lst--later\n\nText.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/9-appendix.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nListing: no id\n\n\\phantomsection\\label{tab:x}\nListing: wrong\n\n\\begin{handtyped}[htbp]\n\\handtypedcode{later}\n\\caption{later}\n\\label{lst:later}\n\\end{handtyped}\nText.\n",
+  "warnings": []
+ },
+ {
+  "name": "title page",
+  "note": "1-title_page.md",
+  "md": "---\ntex: 1-title_page.tex\nversion: 1.0\ntitle: \"A Sample Title:\"\nstudent_id: \"000000000\"\ndate: \"[Month Year]\"\nquote: 'it''s'\n---\n%%[flag] a note for the author%%\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "1-title_page.md": "---\ntex: 1-title_page.tex\nversion: 1.0\ntitle: \"A Sample Title:\"\nstudent_id: \"000000000\"\ndate: \"[Month Year]\"\nquote: 'it''s'\n---\n%%[flag] a note for the author%%\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/1-title_page.md (version 1.0, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\newcommand{\\tpTitle}{A Sample Title:}\n\\newcommand{\\tpStudentId}{000000000}\n\\newcommand{\\tpDate}{[Month Year]}\n\\newcommand{\\tpQuote}{it's}\n\\maketitlepage\n",
+  "warnings": []
+ },
+ {
+  "name": "title page (round trip)",
+  "note": "1-title_page.md",
+  "md": "---\ntex: 1-title_page.tex\nversion: 1.0\nlast_updated: ?\ntitle: \"A Sample Title:\"\nstudent_id: \"000000000\"\ndate: \"[Month Year]\"\nquote: \"it's\"\n---\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "1-title_page.md": "---\ntex: 1-title_page.tex\nversion: 1.0\nlast_updated: ?\ntitle: \"A Sample Title:\"\nstudent_id: \"000000000\"\ndate: \"[Month Year]\"\nquote: \"it's\"\n---\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/1-title_page.md (version 1.0, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\newcommand{\\tpTitle}{A Sample Title:}\n\\newcommand{\\tpStudentId}{000000000}\n\\newcommand{\\tpDate}{[Month Year]}\n\\newcommand{\\tpQuote}{it's}\n\\maketitlepage\n",
+  "warnings": []
+ },
+ {
+  "name": "html placeholders",
+  "note": "9-appendix.md",
+  "md": "---\ntex: 9-appendices.tex\n---\n%% one \\term{<key>}{<name>}%%\nText <span style=\"color:red\">x</span> and `<code>`.\n```\n<inside fence>\n```\n<spanx> and <b>\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "9-appendix.md": "---\ntex: 9-appendices.tex\n---\n%% one \\term{<key>}{<name>}%%\nText <span style=\"color:red\">x</span> and `<code>`.\n```\n<inside fence>\n```\n<spanx> and <b>\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/9-appendix.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n% one \\term{<key>}{<name>}\nText \\textcolor{red}{x} and \\texttt{<code>}.\n\\begin{verbatim}\n<inside fence>\n\\end{verbatim}\n<spanx> and <b>\n",
+  "warnings": [
+   "9-appendix.md:4: <key> is read by Obsidian as an HTML tag and hides what follows; write it without angle brackets",
+   "9-appendix.md:9: <spanx> is read by Obsidian as an HTML tag and hides what follows; write it without angle brackets",
+   "9-appendix.md:3: a ``` block is written as verbatim"
+  ]
+ },
+ {
+  "name": "glossary",
+  "note": "glossary.md",
+  "md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/glossary.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n% A comment.\n\\term{FNRATE}{FNRATE}{Signal Connection Classification Error Rate}{The proportion of signals accepted.}\n\\term{W1}{$W_1$}{Wasserstein-1 Distance}{A distance between two distributions.}\n\\term[known good connection]{knowngood}{Known Good Connection}{}{A connection with no attempt to interfere.}\n",
+  "warnings": []
+ },
+ {
+  "name": "glossary (round trip)",
+  "note": "glossary.md",
+  "md": "---\ntex: glossary.tex\nversion: ?\nlast_updated: ?\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** Signal Connection Classification Error Rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 Distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^knowngood\n\nA connection with no attempt to interfere.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "glossary.md": "---\ntex: glossary.tex\nversion: ?\nlast_updated: ?\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** Signal Connection Classification Error Rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 Distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^knowngood\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/glossary.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n% A comment.\n\\term{FNRATE}{FNRATE}{Signal Connection Classification Error Rate}{The proportion of signals accepted.}\n\\term{W1}{$W_1$}{Wasserstein-1 Distance}{A distance between two distributions.}\n\\term[known good connection]{knowngood}{Known Good Connection}{}{A connection with no attempt to interfere.}\n",
+  "warnings": []
+ },
+ {
+  "name": "glossary links",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\nThe [[glossary#FNRATE|FNRATE]] and [[glossary#W1|W1]], [[glossary#^known-good|Known good connection]] and [[glossary#FNRATE|FNRATEs]] and [[glossary#FNRATE|the error]] and [[glossary#^knowngood|known good connections]] and [[glossary#FNRATE]] and [[glossary#APCR|APCR]] and [[glossary#^nope|x]] and [The FNRATE](glossary.md#FNRATE), [Known good connection](glossary#%5Eknown-good) and [W1](glossary.md#W1).\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\nThe [[glossary#FNRATE|FNRATE]] and [[glossary#W1|W1]], [[glossary#^known-good|Known good connection]] and [[glossary#FNRATE|FNRATEs]] and [[glossary#FNRATE|the error]] and [[glossary#^knowngood|known good connections]] and [[glossary#FNRATE]] and [[glossary#APCR|APCR]] and [[glossary#^nope|x]] and [The FNRATE](glossary.md#FNRATE), [Known good connection](glossary#%5Eknown-good) and [W1](glossary.md#W1).\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nThe \\gls{FNRATE} and \\gls{W1}, \\Gls{knowngood} and \\glspl{FNRATE} and \\glslink{FNRATE}{the error} and \\glspl{knowngood} and \\gls{FNRATE} and \\gls{APCR} and \\glslink{nope}{x} and \\glslink{FNRATE}{The FNRATE}, \\Gls{knowngood} and \\gls{W1}.\n",
+  "warnings": [
+   "5-methodology.md:4: [[glossary#APCR|APCR]]: no entry 'APCR' in glossary.md",
+   "5-methodology.md:4: [[glossary#^nope|x]]: no entry '^nope' in glossary.md"
+  ]
+ },
+ {
+  "name": "glossary links without a glossary",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\nThe [[glossary#FNRATE|FNRATE]] and [[glossary#^x-y|x y]].\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\nThe [[glossary#FNRATE|FNRATE]] and [[glossary#^x-y|x y]].\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nThe \\gls{FNRATE} and \\glslink{xy}{x y}.\n",
+  "warnings": []
+ },
+ {
+  "name": "glossary equations",
+  "note": "glossary.md",
+  "md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted:\n\n$$\n\\mathrm{FNRATE}_s = \\frac{1}{N_s}\\sum_{i=1}^{N_s}(1-\\mathrm{Res}_i)\n$$\n\nwhere $\\mathrm{Res}_i = 1$ for an signal decision.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** signal connection classification error rate\n\nThe proportion of signals accepted:\n\n$$\n\\mathrm{FNRATE}_s = \\frac{1}{N_s}\\sum_{i=1}^{N_s}(1-\\mathrm{Res}_i)\n$$\n\nwhere $\\mathrm{Res}_i = 1$ for an signal decision.\n\n# W1\n**Long form:** Wasserstein-1 distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^known-good\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/glossary.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n% A comment.\n\\term{FNRATE}{FNRATE}{Signal Connection Classification Error Rate}{The proportion of signals accepted: \\[ \\mathrm{FNRATE}_s = \\frac{1}{N_s}\\sum_{i=1}^{N_s}(1-\\mathrm{Res}_i) \\] where $\\mathrm{Res}_i = 1$ for an signal decision.}\n\\term{W1}{$W_1$}{Wasserstein-1 Distance}{A distance between two distributions.}\n\\term[known good connection]{knowngood}{Known Good Connection}{}{A connection with no attempt to interfere.}\n",
+  "warnings": []
+ },
+ {
+  "name": "glossary equations (round trip)",
+  "note": "glossary.md",
+  "md": "---\ntex: glossary.tex\nversion: ?\nlast_updated: ?\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** Signal Connection Classification Error Rate\n\nThe proportion of signals accepted:\n\n$$\n\\mathrm{FNRATE}_s = \\frac{1}{N_s}\\sum_{i=1}^{N_s}(1-\\mathrm{Res}_i)\n$$\n\nwhere $\\mathrm{Res}_i = 1$ for an signal decision.\n\n# W1\n**Long form:** Wasserstein-1 Distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^knowngood\n\nA connection with no attempt to interfere.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "glossary.md": "---\ntex: glossary.tex\nversion: ?\nlast_updated: ?\n---\n%% A comment.%%\n\n# FNRATE\n**Long form:** Signal Connection Classification Error Rate\n\nThe proportion of signals accepted:\n\n$$\n\\mathrm{FNRATE}_s = \\frac{1}{N_s}\\sum_{i=1}^{N_s}(1-\\mathrm{Res}_i)\n$$\n\nwhere $\\mathrm{Res}_i = 1$ for an signal decision.\n\n# W1\n**Long form:** Wasserstein-1 Distance\n**Printed as:** $W_1$\n\nA distance between two distributions.\n\n# Known Good Connection\n^knowngood\n\nA connection with no attempt to interfere.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/glossary.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n% A comment.\n\\term{FNRATE}{FNRATE}{Signal Connection Classification Error Rate}{The proportion of signals accepted: \\[ \\mathrm{FNRATE}_s = \\frac{1}{N_s}\\sum_{i=1}^{N_s}(1-\\mathrm{Res}_i) \\] where $\\mathrm{Res}_i = 1$ for an signal decision.}\n\\term{W1}{$W_1$}{Wasserstein-1 Distance}{A distance between two distributions.}\n\\term[known good connection]{knowngood}{Known Good Connection}{}{A connection with no attempt to interfere.}\n",
+  "warnings": []
+ },
+ {
+  "name": "glossary edge cases",
+  "note": "glossary.md",
+  "md": "---\ntex: glossary.tex\n---\nText first.\n%% block\nmore\nend%%\n\n# Empty Entry\n\n# Spaced  \n\n\n^spaced-id\n\n**Printed as:** \n\nDesc with [[glossary#FNRATE|FNRATE]].\n# Area Under the Curve of it\n**Long form:** x\n# AUC\n**Long form:** area under the receiver-operating characteristic curve of the \\emph{x} and $y$\n\nA.\n$$\nstray\n$$\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "glossary.md": "---\ntex: glossary.tex\n---\nText first.\n%% block\nmore\nend%%\n\n# Empty Entry\n\n# Spaced  \n\n\n^spaced-id\n\n**Printed as:** \n\nDesc with [[glossary#FNRATE|FNRATE]].\n# Area Under the Curve of it\n**Long form:** x\n# AUC\n**Long form:** area under the receiver-operating characteristic curve of the \\emph{x} and $y$\n\nA.\n$$\nstray\n$$\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/glossary.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n% block\n% more\n% end\n\\term[empty entry]{emptyentry}{Empty Entry}{}{}\n\\term{spacedid}{Spaced}{}{Desc with \\gls{FNRATE}.}\n\\term[area under the curve of it]{areaunderthecurveofit}{Area Under the Curve of it}{x}{}\n\\term{AUC}{AUC}{Area Under the Receiver-Operating Characteristic Curve of the \\emph{x} and $y$}{A. \\[ stray \\]}\n",
+  "warnings": [
+   "glossary.md:4: text before the first entry is left out",
+   "glossary.md: the entry 'Empty Entry' has no description",
+   "glossary.md:18: [[glossary#FNRATE|FNRATE]]: no entry 'FNRATE' in glossary.md",
+   "glossary.md: the entry 'Area Under the Curve of it' has no description"
+  ]
+ },
+ {
+  "name": "comment blocks",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\n---\n___\n%% First line\nsecond line\n\nfourth%%\n%%[flag] for Obsidian%%\nText.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\n---\n___\n%% First line\nsecond line\n\nfourth%%\n%%[flag] for Obsidian%%\nText.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n% =====================================================================\n% First line\n% second line\n%\n% fourth\nText.\n",
+  "warnings": []
+ },
+ {
+  "name": "comment blocks (round trip)",
+  "note": "5-methodology.md",
+  "md": "---\ntex: 5-methodology.tex\nversion: ?\nlast_updated: ?\n---\n___\n%% First line\nsecond line\n\nfourth%%\nText.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: 5-methodology.tex\nversion: ?\nlast_updated: ?\n---\n___\n%% First line\nsecond line\n\nfourth%%\nText.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n% =====================================================================\n% First line\n% second line\n%\n% fourth\nText.\n",
+  "warnings": []
+ },
+ {
+  "name": "comment block forms",
+  "note": "5-methodology.md",
+  "md": "%%\nonly middle\n%%\n%%[tag] tagged\nblock%%\n  %% indented%%\n%% unclosed\nto the end\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "%%\nonly middle\n%%\n%%[tag] tagged\nblock%%\n  %% indented%%\n%% unclosed\nto the end\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n% only middle\n  % indented\n% unclosed\n% to the end\n",
+  "warnings": []
+ },
+ {
+  "name": "non-ASCII white space in blocks",
+  "note": "5-methodology.md",
+  "md": "| a |\n| --- |\n| 1 |\n\nTable: Cap. ^tab--n\n\n- **RQ1** One ^rq1\n\n%%[cols] l%%\n\n# Heading {-}\n**x**\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "| a |\n| --- |\n| 1 |\n\nTable: Cap. ^tab--n\n\n- **RQ1** One ^rq1\n\n%%[cols] l%%\n\n# Heading {-}\n**x**\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\begin{table}[htbp]\n\\centering\n\\caption{Cap.}\n\\label{tab:n}\n\\small\n\\begin{tabular}{@{}l@{}}\n\\toprule\na \\\\\n\\midrule\n1 \\\\\n\\bottomrule\n\\end{tabular}\n\\end{table}\n\\begin{enumerate}\n  \\item[\\textbf{RQ1}] \\hypertarget{rq1}{}One\n\\end{enumerate}\n\n\\section{Heading {-}}\n\\textbf{x}\n",
+  "warnings": []
+ },
+ {
+  "name": "quotes and callouts",
+  "note": "5-methodology.md",
+  "md": "> quoted *text*\n> second\n\n> [!info]- Notes\n> hidden\nAfter.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "> quoted *text*\n> second\n\n> [!info]- Notes\n> hidden\nAfter.\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\begin{quote}\nquoted \\emph{text}\nsecond\n\\end{quote}\n\nAfter.\n",
+  "warnings": []
+ },
+ {
+  "name": "no trailing newline",
+  "note": "5-methodology.md",
+  "md": "---\ntex: x.tex\n---\n| a |\n| --- |\n| 1 |",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: x.tex\n---\n| a |\n| --- |\n| 1 |"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\n\\begin{tabular}{@{}l@{}}\n\\toprule\na \\\\\n\\midrule\n1 \\\\\n\\bottomrule\n\\end{tabular}\n",
+  "warnings": [
+   "5-methodology.md:1: a table without a caption line is written as a bare tabular, not a float"
+  ]
+ },
+ {
+  "name": "no properties",
+  "note": "5-methodology.md",
+  "md": "Just text, [[#Nope]].\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "Just text, [[#Nope]].\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nJust text,.\n",
+  "warnings": [
+   "5-methodology.md:1: [[#Nope]]: no labelled heading 'Nope' in this note"
+  ]
+ },
+ {
+  "name": "unclosed properties",
+  "note": "5-methodology.md",
+  "md": "---\ntex: x\nText.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\ntex: x\nText.\n"
+  },
+  "error": "ValueError: list.index(x): x not in list"
+ },
+ {
+  "name": "bad heading label",
+  "note": "5-methodology.md",
+  "md": "# H\n^a----b\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "# H\n^a----b\n"
+  },
+  "error": "ConversionError: block id ^a----b is not one this script writes (runs of one to three dashes)"
+ },
+ {
+  "name": "bad quoted property",
+  "note": "5-methodology.md",
+  "md": "---\nwordcount: \"tr\\qe\"\n---\nText.\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "---\nwordcount: \"tr\\qe\"\n---\nText.\n"
+  },
+  "error": "JSONDecodeError: Invalid \\escape: line 1 column 4 (char 3)"
+ },
+ {
+  "name": "heading references across notes",
+  "note": "5-methodology.md",
+  "md": "See Section [[3-introduction#Aims {-}|Aims]] and Chapter [[3-introduction#Aims|Aims]] and [[#Local|L]].\n## Local\n^sec--local\n",
+  "notes": {
+   "0-preamble.md": "---\ntex: 0-preamble.tex\n---\n```latex\n\\newcommand{\\startappendices}{\\appendix}\n\\newcommand{\\printterms}{\\printglossary}\n\\DeclareRobustCommand{\\subappendix}{x}\n\\newcommand{\\withargs}[1]{#1}\n```\n",
+   "5-methodology.md": "See Section [[3-introduction#Aims {-}|Aims]] and Chapter [[3-introduction#Aims|Aims]] and [[#Local|L]].\n## Local\n^sec--local\n",
+   "3-introduction.md": "# Aims {-}\n^sec--aims\n"
+  },
+  "tex": "% Generated from Vault/LaTeX/5-methodology.md (version ?, last updated ?). Edit the note: this file is rewritten from it on every save.\n% !TEX root = main.tex\nSee Section~\\ref{sec:aims} and Chapter~\\ref{sec:aims} and \\ref{sec:local}.\n\\subsection{Local}\n\\label{sec:local}\n",
+  "warnings": []
+ }
+]

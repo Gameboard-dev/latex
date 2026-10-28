@@ -1,0 +1,37 @@
+/* LaTeX's status bar item (app.rs): what the plugin is doing; a click opens the log. */
+.latex-status {
+  white-space: nowrap;
+}
+
+/* Chapter ordering and inclusion: the notes of the folder in one scrolling box (as Ignis Control's excluded plugins). */
+.latex-chapters {
+  max-height: 360px;
+  overflow-y: auto;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m);
+  padding: var(--size-2-2) var(--size-4-3);
+  background: var(--background-secondary);
+}
+
+.latex-chapters .setting-item:first-child {
+  border-top: none;
+}
+
+.latex-chapters .setting-item.latex-order {
+  cursor: grab;
+}
+
+/* The compile command's text area in the settings tab, under its description rather than beside it. */
+.setting-item.latex-command {
+  flex-wrap: wrap;
+}
+
+.setting-item.latex-command .setting-item-control {
+  flex-basis: 100%;
+  margin-top: var(--size-4-2);
+}
+
+.setting-item.latex-command textarea {
+  font-family: var(--font-monospace);
+  font-size: var(--font-ui-smaller);
+}

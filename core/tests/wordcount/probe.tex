@@ -1,0 +1,112 @@
+% Raw LaTeX that a note may hold (the converter copies it as it is), one counted section per construct.
+\startwordcount{nbsp}
+a b c
+
+\startwordcount{citetthree}
+\citet{one,two,three}
+
+\startwordcount{citettwo}
+\citet{one,two}
+
+\startwordcount{citetnone}
+\citet{none}
+
+\startwordcount{citeauthornone}
+\citeauthor{none} x
+
+\startwordcount{Textcite}
+\Textcite{three}
+
+\startwordcount{citealp}
+\citealp{one}
+
+\startwordcount{citeyear}
+\citeyear{one}
+
+\startwordcount{autocite}
+\autocite{one}
+
+\startwordcount{Cite}
+\Cite{one}
+
+\startwordcount{Parencite}
+\Parencite{one}
+
+\startwordcount{textcites}
+\textcites{one}{two}
+
+\startwordcount{parencites}
+\parencites{one}[p.~2]{two}
+
+\startwordcount{nocite}
+x \nocite{two} y
+
+\startwordcount{Citeauthor}
+\Citeauthor{prefix}
+
+\startwordcount{citeauthortwo}
+\citeauthor{two}
+
+\startwordcount{citeptwo}
+\citep{one,two}
+
+\startwordcount{citetloc}
+\citet[see][p.~3]{two}
+
+\startwordcount{description}
+\begin{description}
+\item[Term one] text here
+\item no label
+\end{description}
+
+\startwordcount{url}
+see \url{https://example.org/a-b} now and\url{x}then
+
+\startwordcount{mbox}
+a\mbox{b c}d
+
+\startwordcount{ldots}
+word\ldots{} next \dots
+
+\startwordcount{refs}
+(\eqref{eq:x}) and \pageref{eq:x} and A\ref{eq:x}
+
+\startwordcount{spaces}
+a\quad b\qquad c\hspace{1em}d\hfill e
+
+\startwordcount{breaks}
+a\\b\newline c\\[2pt]d
+
+\startwordcount{accents}
+caf\'e na\"{\i}ve Ma\ss e \o re
+
+\startwordcount{dashcmds}
+a\textendash b\textemdash c
+
+\startwordcount{styles}
+\textsc{Small Caps} \textsf{sans} \textup{up} \textmd{md} \textsl{sl} \textrm{rm} \textnormal{normal}
+
+\startwordcount{glossary}
+\Glspl{knowngood} \Gls{FNRATE} \glspl{shift}
+
+\startwordcount{colours}
+\textcolor{red}{red words} and \href{https://example.org}{link text}
+
+\startwordcount{nested}
+\textbf{bold \emph{and emphasised}} words
+
+\startwordcount{off}
+{\wordcountoff not \emph{these} words} but {these \wordcountoff not} these
+
+\startwordcount{groups}
+{a}{b} c{d}
+
+\startwordcount{controlspace}
+a\ b and c\
+d
+
+\startwordcount{symbols}
+\% \& \# \$ \_ \{ \} a\,b c\;d e\!f g\/h i\-j
+
+\stopwordcount
+After the counted sections.

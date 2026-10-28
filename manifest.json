@@ -1,0 +1,10 @@
+{
+  "id": "latex",
+  "name": "LaTeX",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "Write a LaTeX document in Markdown notes: each note becomes its LaTeX chapter whenever it is saved (headings, labels, references, citations, tables, figures, equations, a glossary), and the document is compiled once the notes are quiet.",
+  "author": "Gameboard-dev",
+  "authorUrl": "https://github.com/Gameboard-dev",
+  "isDesktopOnly": false
+}

@@ -1,0 +1,48 @@
+{
+ "about": "The author's chapters (the vault's LaTeX/compiled) as they were on 2026-10-25, identified by the xxh3-64 (tests/wordcount.rs) and sha256 (zotsearch/tests/test_wordcount.py) of each .tex, with the Lua counter's counts from a build of exactly those files and the counts expected here. Only a chapter whose file still has that hash is checked (tests/wordcount.rs, real_chapters).",
+ "chapters": {
+  "3-introduction.tex": {
+   "xxh3": "901498b62f95471a",
+   "sha256": "9b8226c4342c791930e147820a40ffabcb9db5888ec312ad36f4d513bb22b4d0",
+   "lua": {"introduction": 1167},
+   "expected": {"introduction": 1167}
+  },
+  "4-literature_review.tex": {
+   "xxh3": "de11a48cdccfb910",
+   "sha256": "3d0b1336c2ab7a3adf0d2ee41963eedeaf20e4c84a8996f9fbb92b3807d1a5ab",
+   "lua": {"litreview": 3072},
+   "expected": {"litreview": 3072}
+  },
+  "5-methodology.tex": {
+   "xxh3": "743f69dbcff6e930",
+   "sha256": "b4f8a7a51bb90cd2e60315d2bccd3762ed350e11ed957b1279bc26cb90529a1c",
+   "lua": {
+    "philosophy": 118,
+    "methodology": 3072
+   },
+   "expected": {
+    "philosophy": 118,
+    "methodology": 3071
+   },
+   "why": "\"final-epoch\" was hyphenated across the break after PDF page 21 of that build, and the Lua counter counted each page's part as a word; it is one word by the counter's own rule (a word hyphenated across lines counts once)"
+  },
+  "6-results.tex": {
+   "xxh3": "b75b773cbd0f86ce",
+   "sha256": "8cc53016ff750aa3c4324c01e4bd8ac8714f100cd0d7f76419017999d49baaba",
+   "lua": {"results": 1},
+   "expected": {"results": 1}
+  },
+  "7-discussion.tex": {
+   "xxh3": "4bf6a32d0711192e",
+   "sha256": "141a71fcb67575cffdbd635de8d8c26e18942eafd887c47a3448221f713dae62",
+   "lua": {"discussion": 3},
+   "expected": {"discussion": 3}
+  },
+  "8-ethics.tex": {
+   "xxh3": "01ef55143c057bfd",
+   "sha256": "fd52bf043f714848e2c31970824e6f5d60b381d7cae987e5035e7abc845f2a2b",
+   "lua": {"ethics": 1057},
+   "expected": {"ethics": 1057}
+  }
+ }
+}

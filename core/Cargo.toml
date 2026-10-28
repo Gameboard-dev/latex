@@ -1,0 +1,31 @@
+[package]
+name = "latex-core"
+version = "0.1.0"
+edition = "2021"
+description = "LaTeX, an Obsidian plugin in Rust: each note in a folder becomes a LaTeX chapter on every save, and the document is compiled once the notes are quiet"
+publish = false
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+obsidian-kit = { path = "../../shared" }
+wasm-bindgen = "=0.2.129"
+js-sys = "0.3"
+serde-wasm-bindgen = "0.6"
+serde = { version = "1", features = ["derive"] }
+# Property values in double quotes are JSON strings (escapes included), as latex_sync.py reads them.
+serde_json = "1"
+# The conversion's line patterns (https://docs.rs/regex-lite): the regex crate's syntax and matching without its
+# Unicode tables, measured 2026-10-25 at 300 KB less than regex (809 -> about 550 KB). Python's \s is written out as a
+# class (convert::py), so white space matches as in latex_sync.py.
+regex-lite = "0.1"
+# The compile command line split into a program and its arguments as a POSIX shell would, without running a shell
+# (https://docs.rs/shlex).
+shlex = "1.3"
+# %XX in a Markdown link's target, [W1](glossary.md#%5Eknown-good), as urllib.parse.unquote (https://docs.rs/percent-encoding).
+percent-encoding = "2"
+# Whether a .tex was edited outside its note: the hash of what was last written (the hash Augmented View uses too).
+xxhash-rust = { version = "0.8", features = ["xxh3"] }
+# Inflating and deflating PDF streams (pdf.rs, splice.rs): object streams, joined content streams (https://docs.rs/miniz_oxide).
+miniz_oxide = { version = "0.8", default-features = false, features = ["with-alloc"] }
