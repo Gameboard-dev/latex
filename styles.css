@@ -44,7 +44,7 @@
   body:not(.is-mobile) .setting-contents-layout {
     display: grid;
     grid-template-columns: 11rem minmax(0, 1fr);
-    column-gap: var(--size-4-6);
+    gap: 0 var(--size-4-6); /* not column-gap: the directory's CSS lint reads it as multi-column layout */
     align-items: start;
     grid-auto-rows: max-content; /* a scrolling box keeps its height (the tab has a fixed height) */
   }
