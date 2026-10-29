@@ -20,10 +20,10 @@ async fn request(method: &str, path: &str) -> Result<(u16, Value), String> {
     Ok((code, body))
 }
 
-/// Whether builds go to Ignis now: the setting on, this page in Ignis (a browser, which cannot compile), and Ignis
+/// Whether builds go to Ignis now: this page in Ignis (a browser, which cannot compile; detected, no setting), and Ignis
 /// ready to build, with Obsidian closed on the computer (it builds the document itself when open). Kept in the app.
 pub async fn check() -> bool {
-    let wanted = with(|a| a.settings.ignis_build && js::in_ignis() && !a.can_compile()).unwrap_or(false);
+    let wanted = js::in_ignis() && !with(|a| a.can_compile()).unwrap_or(false);
     let ok = wanted
         && match request("GET", "status").await {
             Ok((200, v)) => v["available"] == true && v["desktop_open"] != true,

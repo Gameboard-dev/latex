@@ -218,7 +218,6 @@ notes folder and choose **Apply ordering** to renumber the notes. See
 | Setting | Default | Description |
 | --- | --- | --- |
 | Compile after a change | on | Build the document after each save. Desktop only. |
-| Build through Ignis | off | Ask Ignis Control to build when the vault is open in a browser through Ignis ([below](#building-through-ignis)). |
 | Engine | LuaLaTeX | LuaLaTeX, pdfLaTeX or XeLaTeX. Chooses the default compile command; fast preview needs LuaLaTeX. |
 | Compile command | latexmk with the engine, biber and makeglossaries | One command per line, run in the output folder in turn until one fails. Placeholders as in LaTeX Workshop: `%DOC%` (main file without `.tex`), `%DOCFILE%`, `%DOC_EXT%`, `%DOCFILE_EXT%`, `%DIR%`, `%OUTDIR%`. Each step must run a TeX tool (latexmk, lualatex, biber, makeglossaries ...) or `python -m pygments`. Clear the box to restore the default. |
 | TeX programs folder | (empty) | A folder searched for TeX programs after the system `PATH`. Empty: the usual TinyTeX, TeX Live, MiKTeX and MacTeX folders that exist. |
@@ -331,8 +330,9 @@ Files whose names start with a dot are hidden in Obsidian's file explorer; open 
 ## Building through Ignis
 
 [Ignis](https://github.com/Gameboard-dev/ignis-control#which-ignis) serves an Obsidian vault to a web browser. A page in
-a browser cannot run TeX, so normally only the desktop app on the PC builds the document. With **Build through Ignis**
-on, the browser converts the notes and the PC compiles them, so the PDF stays current while Obsidian is closed on the PC.
+a browser cannot run TeX, so normally only the desktop app on the PC builds the document. When the plugin finds itself
+in a browser through Ignis (detected; there is no setting), the browser converts the notes and the PC compiles them, so
+the PDF stays current while Obsidian is closed on the PC.
 
 ### How it works
 
@@ -356,8 +356,8 @@ the desktop plugin builds instead.
      explains what the PC side does and does not do.
    - [SETUP.md: "The LaTeX build"](https://github.com/Gameboard-dev/ignis-control/blob/main/SETUP.md#the-latex-build)
      covers the PC-side set-up: TinyTeX, Pygments and the sign-in settings.
-2. In the plugin's settings, turn on **Compiling → Build through Ignis**. It has an effect only in a browser through
-   Ignis; the desktop app ignores it.
+2. Nothing to turn on in the plugin: in a browser through Ignis it asks Ignis to build by itself, and the desktop app
+   builds as usual.
 3. Keep the PC side's assumptions:
    - The notes folder must be `LaTeX` (the default), because Ignis Control builds `LaTeX/compiled/main.tex`.
    - `main.tex` must exist in `LaTeX/compiled/`.

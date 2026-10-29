@@ -76,8 +76,6 @@ pub struct Settings {
     /// When fast preview has shown every change with every page current, the full build waits until the notes have been
     /// idle this long (seconds; 0: right after the quiet period, as without fast preview).
     pub idle_build_seconds: f64,
-    /// Ask Ignis to build when the vault is open in a browser through it (ignis.rs); off by default.
-    pub ignis_build: bool,
     /// Each build's decisions, commands and timings in the log (to find what makes a build slow).
     pub debug_log: bool,
     /// The TeX engine (pipeline::TEX_ENGINES): the default compile command's; fast preview runs only with LuaLaTeX.
@@ -153,7 +151,6 @@ impl Default for Settings {
             cache_tikz: true,
             direct_builds: true,
             idle_build_seconds: 60.0,
-            ignis_build: false,
             debug_log: false,
             engine: "lualatex".into(),
             open_pdf: true,
@@ -300,8 +297,7 @@ const UI: &[Row] = &[
     ("", "", "", Ctl::Custom(chapter_box)),
     ("", "Compiling", "", Ctl::Head),
     ("compile", "Compile after a change", "Desktop only. On a phone, or in a browser, the computer's Obsidian converts and builds a saved note.", Ctl::Toggle),
-    ("ignisBuild", "Build through Ignis", "Optional, for a vault served by Ignis (a self-hosted Obsidian server; most users do not have it). When the vault is opened in a browser through Ignis and Obsidian is not open on the computer, ask Ignis to build the document there after each save; Ignis builds in a sandbox of its own and only for a signed-in user. Needs Ignis with its LaTeX build set up (Ignis's SETUP.md, \"The LaTeX build\").", Ctl::Toggle),
-    ("", "", "Compiling needs a TeX distribution on this computer: MiKTeX (https://miktex.org/download, which installs missing packages when asked), TeX Live (https://tug.org/texlive/), MacTeX on a Mac (https://tug.org/mactex/) or TinyTeX (https://yihui.org/tinytex/, a small TeX Live, under 200 MB), each with latexmk (latexmk needs Perl: TeX Live, MacTeX and TinyTeX have it on Windows and macOS; with MiKTeX install Strawberry Perl, https://strawberryperl.com). TinyTeX lacks biber and the glossaries packages and adds no missing package by itself: run tlmgr install biber biblatex glossaries glossaries-extra, then tlmgr path add, and tlmgr install <package> for any other package a build reports missing. Restart Obsidian after installing, so that it sees the new programs. The default command is latexmk with the engine below, biber and makeglossaries. Without latexmk, write the steps as lines of the compile command, e.g. pdflatex -synctex=1 -interaction=nonstopmode %DOC%, then biber %DOCFILE%, then makeglossaries %DOCFILE%, then the pdflatex line twice more. Code blocks are coloured by Pygments (Python, then pip install pygments). Visual Studio Code and LaTeX Workshop are not needed. The commands are kept on this device only: a vault is shared with other devices and with a browser, which must not choose the programs this computer runs.", Ctl::Note),
+    ("", "Installing LaTeX", "Compiling needs a TeX distribution on this computer (TinyTeX, TeX Live, MiKTeX or MacTeX) with latexmk, biber and makeglossaries. Which to install, and the extra steps for each:", Ctl::Link("https://github.com/Gameboard-dev/latex#requirements")),
     ("engine", "Engine", "The TeX engine the document is written for: LuaLaTeX or XeLaTeX for system fonts (fontspec), pdfLaTeX for a classic document. It chooses the default compile command; fast preview needs LuaLaTeX.", Ctl::Custom(engine_choice)),
     ("compileCommand", "Compile command", "One command per line, run in the output folder in turn until one fails; quoted as in a shell. %DOC% is the main file's path without .tex, %DOCFILE% its name, %DIR% the output folder, as in LaTeX Workshop's recipes. The default is latexmk with the engine above, biber and makeglossaries; clear the box to return to it. This device only.", Ctl::Custom(command_area)),
     ("texFolder", "TeX programs folder", "Where this device's TeX programs are (latexmk, lualatex, biber …), searched after the system's PATH: for a TeX installed after Obsidian started, which Obsidian does not see until it restarts. Empty: the usual places (TinyTeX, TeX Live, MiKTeX, MacTeX) that exist. This device only.", Ctl::Custom(tex_folder_row)),
@@ -1373,7 +1369,7 @@ async fn handle(path: String) {
             }
         }
     }
-    if with(|a| a.settings.ignis_build && js::in_ignis()).unwrap_or(false) {
+    if js::in_ignis() {
         crate::ignis::check().await;
     }
     let Some(building) = with(|a| {
