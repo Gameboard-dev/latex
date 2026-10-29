@@ -1,7 +1,7 @@
 {
   "id": "latex",
   "name": "LaTeX",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "minAppVersion": "1.8.7",
   "description": "Turn a folder of Markdown notes into a LaTeX document and keep its PDF compiled: each note becomes its chapter whenever you save it, with citations, cross-references, tables, figures, equations and a glossary.",
   "author": "Gameboard-dev",

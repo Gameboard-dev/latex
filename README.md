@@ -10,7 +10,29 @@ or the appendix. Whenever you save a note, the plugin converts it to its `.tex` 
 document. The notes are the master copy. The conversion runs one way only, from note to `.tex`, so you edit the notes
 and never the `.tex` files.
 
-The plugin is written in Rust and compiled to WebAssembly; `main.js` only loads `latex.wasm`.
+The plugin is written in Rust and compiled to WebAssembly; `main.js` only loads the module (in a release it is
+inlined in `main.js`).
+
+## Disclosures (Obsidian's developer policies)
+
+Free, open source (MIT), no account, no ads and no telemetry. To compile, the plugin runs the TeX programs you installed
+yourself (LuaLaTeX, pdfLaTeX or XeLaTeX, latexmk, biber, makeglossaries) and Python with Pygments for code listings:
+only in desktop Obsidian, only programs on a fixed list, with argument arrays and no shell, at below-normal priority,
+from commands kept on each device rather than in the synced vault. On the desktop it makes no network requests; in a
+browser through Ignis it asks Ignis's build relay on the page's own address to compile. Everything it writes is in the
+vault's output folder (`<notes folder>/compiled/`); outside the vault, only the TeX distribution keeps its own caches.
+It never downloads, installs or updates anything; a TeX distribution may download missing packages by its own settings
+(MiKTeX's "install on-the-fly"). Desktop only, because compiling needs Node's `child_process`. Each program, request
+and file, and how the plugin meets Obsidian's [Developer policies](https://docs.obsidian.md/community-directory/developer-policies):
+[Disclosures and compliance](docs/disclosures.md).
+
+## Documentation
+
+- [Conversion rules](docs/conversion.md): every rule from note to `.tex`.
+- [Builds, fast preview and the PDF pane](docs/builds-and-preview.md).
+- [Word counts](docs/word-counts.md).
+- [Fast preview: design notes](docs/fast-preview-design.md).
+- [Disclosures and compliance](docs/disclosures.md): programs run, network use, files, and Obsidian's policies.
 
 ## Features
 
@@ -33,8 +55,9 @@ The plugin is written in Rust and compiled to WebAssembly; `main.js` only loads 
 
 ## Requirements
 
-- Obsidian 1.5.0 or later. Compiling needs the desktop app. On a phone or tablet the notes are converted only for their
-  word counts and warnings; the desktop app writes the `.tex` files and builds when it sees the saved notes.
+- Obsidian 1.8.7 or later, the desktop app (the plugin is desktop-only, so Obsidian's mobile app does not load it). In
+  a browser through Ignis, on any device, the notes are converted and Ignis's computer builds them
+  ([Building through Ignis](#building-through-ignis)).
 - A LaTeX distribution:
 
   | OS | Distribution | Link |
@@ -67,7 +90,7 @@ Notes on the distributions:
 
 ## Installation
 
-1. Download `main.js`, `manifest.json`, `styles.css` and `latex.wasm` from the
+1. Download `main.js` (the WebAssembly module is inlined in it), `manifest.json` and `styles.css` from the
    [latest release](https://github.com/Gameboard-dev/latex/releases/latest).
 2. Copy them into `<vault>/.obsidian/plugins/latex/`.
 3. In Obsidian, open **Settings → Community plugins** and enable **LaTeX**.
@@ -323,7 +346,7 @@ Files whose names start with a dot are hidden in Obsidian's file explorer; open 
 | Fast preview does not run | The **Engine** must be LuaLaTeX. |
 | The PDF does not open beside the note | The output folder must be in the vault, and the desktop app is required. |
 | Sync scrolling does nothing | The compile command must write SyncTeX (`-synctex=1`, as the default does). The log says when the SyncTeX file is missing. |
-| On a phone or in a browser the status says `converted` and nothing builds | Expected: the desktop app builds when it sees the saved notes; the status bar then says `built on the PC at …` once the PC's build ends. In a browser through Ignis, see the next section. |
+| In a browser through Ignis the status says `converted` and nothing builds | Expected while desktop Obsidian runs on the PC: the desktop app builds when it sees the saved notes; the status bar then says `built on the PC at …` once the PC's build ends. Otherwise, see the next section. |
 | In a browser through Ignis the PDF stays old, even after reloading the page | Ignis does not watch the output folder: let it watch `main.pdf`, `main.shown.pdf`, `main.synctex.gz` and `latex-status.json` ([below](#following-the-pcs-builds-from-a-browser-or-a-phone)). |
 | A `.tex` file edited by hand was overwritten | It is in `.sync-backups/`. Edit the note instead. |
 
@@ -346,7 +369,7 @@ the PDF stays current while Obsidian is closed on the PC.
    example `Ignis build: built in 31 s`, or the errors), updates the status bar and shows the PDF.
 
 If a build is not possible, the log says why (for example `Ignis build: not available (HTTP 503: ...)`), and the
-browser converts notes only for their word counts and warnings, as on a phone. While desktop Obsidian runs on the PC,
+browser converts notes only for their word counts and warnings. While desktop Obsidian runs on the PC,
 the desktop plugin builds instead.
 
 ### Setting it up
@@ -410,6 +433,7 @@ Build and test from the `obsidian-cargo-lib` folder:
 cargo run -p pack --release -- latex                      # writes latex/latex.wasm
 cargo run -p pack --release -- latex --fast               # a quicker build while working
 cargo run -p pack --release -- latex --deploy <vault>/.obsidian/plugins/latex
+cargo run -p pack --release -- latex --release <folder>   # a release's three files, the module inlined in main.js
 cargo test --release -p latex-core                        # the rules, word counts, ordering, SyncTeX
 ```
 

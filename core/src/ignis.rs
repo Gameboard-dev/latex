@@ -1,9 +1,9 @@
-//! Building through Ignis (user, 2026-10-28): an optional extra, off by default (Settings, Compiling, "Build through
-//! Ignis"). When the vault is opened in a browser through Ignis (a self-hosted Obsidian server) and Obsidian is not
-//! open on the computer that runs it, nothing on that computer would build the document after a save. With this on,
-//! the plugin in the browser converts the notes as the desktop app would and asks Ignis to build: a POST to
-//! `<page origin>/relay/latex/compile`. Ignis's launcher builds with one fixed command in a sandbox of its own and
-//! only for a signed-in Cloudflare Access user (ignis/SETUP.md, "The LaTeX build"); the plugin then follows
+//! Building through Ignis (user, 2026-10-28): detected, with no setting (js::in_ignis). When the vault is opened in a
+//! browser through Ignis (a self-hosted Obsidian server) and Obsidian is not open on the computer that runs it, nothing
+//! on that computer would build the document after a save. So the plugin in the browser converts the notes as the
+//! desktop app would and asks Ignis to build: a POST to `<page origin>/relay/latex/compile`. Ignis's launcher builds
+//! with one fixed command in a sandbox of its own and only for a signed-in user (Ignis Control's SETUP.md, "The
+//! LaTeX build"); the plugin then follows
 //! `/relay/latex/status` until the build ends, logs its result and shows the PDF. Nothing here runs a program.
 
 use serde_json::Value;

@@ -918,8 +918,10 @@ impl App {
         str(&call!(self.vault, getName))
     }
 
+    /// The output folder: always in the vault (the notes folder is a vault path; an absolute path typed there is read
+    /// as one), so that the plugin writes nothing outside the vault.
     pub fn out(&self) -> Place {
-        Place::folder(&self.settings.output_folder)
+        Place::Vault(vault_path(&self.settings.output_folder))
     }
 
     /// The vault's folder on this computer (FileSystemAdapter.getBasePath; desktop only).
