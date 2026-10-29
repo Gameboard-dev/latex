@@ -1,6 +1,6 @@
 [package]
 name = "latex-core"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 description = "LaTeX, an Obsidian plugin in Rust: each note in a folder becomes a LaTeX chapter on every save, and the document is compiled once the notes are quiet"
 publish = false

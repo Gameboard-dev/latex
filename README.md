@@ -95,6 +95,9 @@ Notes on the distributions:
 2. Copy them into `<vault>/.obsidian/plugins/latex/`.
 3. In Obsidian, open **Settings → Community plugins** and enable **LaTeX**.
 
+Since 0.1.2 each release's files are built by GitHub Actions from the tagged source, with an artifact attestation of
+their build provenance; check a downloaded file with `gh attestation verify main.js --repo Gameboard-dev/latex`.
+
 To build the plugin from source, see [Development](#development).
 
 ## Quick start
@@ -445,6 +448,12 @@ Some tests need real data or TeX and are skipped unless their variables are set:
 | `core/tests/synctex.rs` | `LATEX_NOTES`, `LATEX_SYNCTEX` (optional) | Note-to-PDF lookups against `synctex view` on a real build. |
 | `core/tests/fast_preview.rs` | `FAST_TEX` | The fast preview on 15 scenarios against clean latexmk builds ([details](docs/builds-and-preview.md#tests)). |
 
+A release is built by GitHub Actions (`.github/workflows/release.yml`) when its tag (`x.y.z`, the manifest's version)
+is pushed: it checks out obsidian-cargo-lib at the commit pinned in the workflow, puts this repository in it as
+`latex`, runs the tests and `pack latex --release <folder>`, attests the three files' build provenance and publishes
+them with the notes in `.github/release-notes/<version>.md`. After a change to the workspace's `Cargo.lock`, run
+`python licences/generate.py` to rewrite `THIRD-PARTY-LICENSES.txt` (needs cargo-about).
+
 ### Code layout
 
 | File | Contents |
@@ -469,4 +478,4 @@ Dependencies: `regex-lite`, `shlex` (splitting the compile command without a she
 
 ## Licence
 
-MIT. See [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE). The licences of the Rust crates compiled into the plugin: [THIRD-PARTY-LICENSES.txt](THIRD-PARTY-LICENSES.txt).
