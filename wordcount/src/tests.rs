@@ -299,3 +299,14 @@ fn citations_switched_off() {
     assert!(on.paras[0].text.contains("[0],"), "a citation shows as [0]: {}", on.paras[0].text);
     assert_eq!(count(false).sections[0].1, 4, "As found, and too.");
 }
+
+#[test]
+fn glossaries_joined() {
+    let mut g = Glossary::from_tex(GLOSSARY, "term");
+    g.extend(&Glossary::from_tex("\\term{W1}{W1}{Wasserstein Distance}{}\n", "term"));
+    g.insert("ACR", "ACR");
+    let names = Names::default();
+    let c = count_chapter("\\startwordcount{k}\n\\gls{W1} \\gls{ACR} \\gls{knowngood}\n", &Context { rules: &Rules::default(), names: &names, glossary: &g, cites: true });
+    assert_eq!(c.sections[0].1, 1 + 1 + 3, "the later W1 replaces $W_1$ (which counts nothing); the inserted ACR; the first file's own");
+    assert!(c.warnings.is_empty(), "{:?}", c.warnings);
+}

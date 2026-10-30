@@ -699,6 +699,16 @@ pub struct Glossary {
 }
 
 impl Glossary {
+    /// Adds each entry of `other`, replacing one of the same key (a later glossary file wins).
+    pub fn extend(&mut self, other: &Glossary) {
+        self.text.extend(other.text.iter().map(|(k, v)| (k.clone(), v.clone())));
+    }
+
+    /// Adds the entry `key`, printed as `text` (an acronym list's short form), replacing one of the same key.
+    pub fn insert(&mut self, key: &str, text: &str) {
+        self.text.insert(key.to_string(), text.to_string());
+    }
+
     /// The entries of the glossary's .tex; `term` is the entry command (the Glossary entry command setting, `term`).
     pub fn from_tex(tex: &str, term: &str) -> Glossary {
         let mut text = HashMap::new();
