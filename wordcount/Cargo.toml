@@ -1,0 +1,10 @@
+[package]
+name = "latex-wordcount"
+version = "0.1.0"
+edition = "2021"
+description = "The LaTeX plugin's word counter: a chapter's words counted from the LaTeX the converter writes, by the rules of the thesis's LuaLaTeX counter; shared with Quarry's command-line tools so that both give the same counts"
+publish = false
+license = "MIT"
+
+# Nothing but the standard library: the counter is used by the plugin (WebAssembly) and by native command-line tools.
+[dependencies]

@@ -1228,7 +1228,7 @@ impl App {
 
     /// A chapter counted with the rules, names and glossary as they are now.
     fn count(&self, tex: &str) -> wordcount::Counts {
-        count_chapter(tex, &Context { rules: &self.count_rules, names: &self.names.1, glossary: &self.glossary })
+        count_chapter(tex, &Context { rules: &self.count_rules, names: &self.names.1, glossary: &self.glossary, cites: true })
     }
 
     /// A chapter's counts kept, or dropped when it has no counted section.

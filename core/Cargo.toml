@@ -10,6 +10,8 @@ crate-type = ["cdylib", "rlib"]
 
 [dependencies]
 obsidian-kit = { path = "../../shared" }
+# The word counter, its own crate so that Quarry's command-line tools count with the same code (../wordcount).
+latex-wordcount = { path = "../wordcount" }
 wasm-bindgen = "=0.2.129"
 js-sys = "0.3"
 serde-wasm-bindgen = "0.6"

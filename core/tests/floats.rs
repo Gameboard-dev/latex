@@ -36,13 +36,13 @@ code words here
 \stopwordcount
 ";
     let rules = Rules::default();
-    let c = count_chapter(tex, &Context { rules: &rules, names: &Names::default(), glossary: &Glossary::default() });
+    let c = count_chapter(tex, &Context { rules: &rules, names: &Names::default(), glossary: &Glossary::default(), cites: true });
     // text 2, picture 0, captions 2 + 2, cells 5, code 0
     assert_eq!(c.sections, vec![("x".to_string(), 11)], "{:?}", c.warnings);
     assert!(c.warnings.is_empty(), "{:?}", c.warnings);
     // with `tikzpicture labels`, the picture's labels count too: 3 + 2 + 2
     let rules = Rules::new("tikzpicture labels", &Macros::default()).0;
-    let c = count_chapter(tex, &Context { rules: &rules, names: &Names::default(), glossary: &Glossary::default() });
+    let c = count_chapter(tex, &Context { rules: &rules, names: &Names::default(), glossary: &Glossary::default(), cites: true });
     assert_eq!(c.sections, vec![("x".to_string(), 18)], "{:?}", c.warnings);
 }
 

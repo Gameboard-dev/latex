@@ -22,7 +22,7 @@ const GLOSSARY: &str = r"\term{FNRATE}{FNRATE}{Attack Presentation Classificatio
 fn count_with(body: &str, rules: &Rules) -> Counts {
     let names = Names::from_bib(BIB);
     let glossary = Glossary::from_tex(GLOSSARY, "term");
-    count_chapter(&format!("\\startwordcount{{k}}\n{body}\n\\stopwordcount\n"), &Context { rules, names: &names, glossary: &glossary })
+    count_chapter(&format!("\\startwordcount{{k}}\n{body}\n\\stopwordcount\n"), &Context { rules, names: &names, glossary: &glossary, cites: true })
 }
 
 /// The count of a passage in a counted section, with the built-in rules.
@@ -37,16 +37,7 @@ fn warnings(body: &str) -> Vec<String> {
 /// Every word counted in a chapter, with its section's key: to compare with the Lua counter's list.
 fn trace(tex: &str, cx: &Context) -> Vec<(String, String)> {
     let tex = tex.replace("\r\n", "\n");
-    let mut c = Counter {
-        cx,
-        m: Machine::default(),
-        keys: Vec::new(),
-        key: None,
-        groups: vec![Group::default()],
-        line_starts: vec![0],
-        unknown: Vec::new(),
-        warnings: Vec::new(),
-    };
+    let mut c = counter(cx, &tex);
     c.run(Src { text: &tex, base: 0, at: None, from: "" });
     c.m.trace.iter().map(|(k, w)| (c.keys[*k].clone(), w.clone())).collect()
 }
@@ -61,7 +52,7 @@ fn trace_file() {
     let names = Names::from_bib(&std::fs::read_to_string(dir.join("My Library.bib")).unwrap_or_default());
     let glossary = Glossary::from_tex(&std::fs::read_to_string(dir.join("glossary.tex")).unwrap_or_default(), "term");
     let rules = Rules::default();
-    let words = trace(&std::fs::read_to_string(p).unwrap(), &Context { rules: &rules, names: &names, glossary: &glossary });
+    let words = trace(&std::fs::read_to_string(p).unwrap(), &Context { rules: &rules, names: &names, glossary: &glossary, cites: true });
     let out: String = words.iter().map(|(k, w)| format!("{k}\t{w}\n")).collect();
     std::fs::write(p.with_extension("words.txt"), out).unwrap();
 }
@@ -87,7 +78,7 @@ fn counted_sections() {
     let r = Rules::default();
     let names = Names::default();
     let g = Glossary::default();
-    let cx = Context { rules: &r, names: &names, glossary: &g };
+    let cx = Context { rules: &r, names: &names, glossary: &g, cites: true };
     let c = count_chapter("Before.\n\\startwordcount{a}\n\\section{Two Words}\n\\label{sec:a}\n\\printwordcount{a}\n\nThree more words.\n\\startwordcount{b}\nOne.\n\\stopwordcount\nAfter.\n", &cx);
     assert_eq!(c.sections, vec![("a".into(), 5), ("b".into(), 1)]);
     assert!(c.warnings.is_empty(), "{:?}", c.warnings);
@@ -187,7 +178,7 @@ fn unknown_commands_are_reported() {
     let names = Names::default();
     let glossary = Glossary::from_tex("\\term{G}{\\weird{x}}{}{}", "term");
     let r = Rules::default();
-    let c = count_chapter("\\startwordcount{k}\n\\gls{G}\n", &Context { rules: &r, names: &names, glossary: &glossary });
+    let c = count_chapter("\\startwordcount{k}\n\\gls{G}\n", &Context { rules: &r, names: &names, glossary: &glossary, cites: true });
     assert_eq!(c.warnings[0], (2, "\\weird (the glossary entry G) has no word-count rule, so what it holds was counted as text: add a rule for \\weird to wordcountRules in the plugin's data.json".to_string()));
 }
 
@@ -228,7 +219,7 @@ fn macro_names_are_settings() {
     let (r, errors) = Rules::new("", &m);
     assert!(errors.is_empty());
     let (names, g) = (Names::default(), Glossary::default());
-    let c = count_chapter("\\countstart{s}\\countprint{s}\nOne {\\nocount two} three.\n\\countstop\nFour.", &Context { rules: &r, names: &names, glossary: &g });
+    let c = count_chapter("\\countstart{s}\\countprint{s}\nOne {\\nocount two} three.\n\\countstop\nFour.", &Context { rules: &r, names: &names, glossary: &g, cites: true });
     assert_eq!(c.sections, vec![("s".into(), 2)]);
 }
 
@@ -249,23 +240,6 @@ fn bib_names() {
 }
 
 #[test]
-fn line_numbers_in_the_note() {
-    let map = LineMap { tex: vec![1, 1, 3, 3, 5, 9], empty: vec![] };
-    assert_eq!(note_line(&map, 4), 3, "the part that begins nearest before");
-    assert_eq!(note_line(&map, 9), 6);
-    assert_eq!(in_note("n.md", &map, &[(5, "x".into())]), ["n.md:5: x"]);
-    assert_eq!(counts_file(&[("intro".into(), 12)]).lines().nth(1), Some("\\wc@set{intro}{12}"));
-}
-
-#[test]
-fn a_chapter_left_out_counts_the_same() {
-    let tex = "% Generated from 5-m.md\n% !TEX root = main.tex\n\\startwordcount{m}\n\\section{Methods}\nSome words here \\cite{one}.\n\\stopwordcount\n";
-    let ctx = |f: &dyn Fn(&Context) -> Counts| f(&Context { rules: &Rules::default(), names: &Names::from_bib(BIB), glossary: &Glossary::from_tex(GLOSSARY, "term") });
-    let (all, out) = (ctx(&|c| count_chapter(tex, c)), ctx(&|c| count_chapter(&crate::pipeline::leave_out(tex), c)));
-    assert_eq!((all.sections, all.warnings), (out.sections, out.warnings));
-}
-
-#[test]
 fn inline_maths_as_one_word() {
     let body = r"One $x^2$ two \(y\), three$z$ four. $$a = b$$";
     assert_eq!(n(body), 4, "off (the Lua counter's rule): maths counts nothing");
@@ -273,4 +247,55 @@ fn inline_maths_as_one_word() {
     r.inline_math_word = true;
     // each inline formula one word of its own, also when run into a word; displayed maths still nothing
     assert_eq!(count_with(body, &r).sections[0].1, 7);
+}
+
+fn paras(body: &str) -> Vec<(String, usize, bool)> {
+    count_with(body, &Rules::default()).paras.into_iter().map(|p| (p.label, p.n, p.float)).collect()
+}
+
+#[test]
+fn paragraphs_with_their_labels() {
+    let body = "\\section{Two Words}\n\n% P1.1 | the first\nOne two three.\n\n% P1.2 | the second\nFour five\\footnote{Six seven.} eight.\n\nNine.";
+    assert_eq!(
+        paras(body),
+        vec![("heading".into(), 2, false), ("P1.1".into(), 3, false), ("P1.2".into(), 5, false), ("-".into(), 1, false)],
+        "a footnote joins the paragraph of its mark; a blank line ends a label"
+    );
+    let c = count_with(body, &Rules::default());
+    assert_eq!(c.paras.iter().map(|p| p.n).sum::<usize>(), c.sections[0].1, "the paragraphs add up to the section");
+    assert_eq!(c.paras[2].text, "Four five Six seven. eight.");
+    // a display formula or a list inside a paragraph splits it; the label stays for its parts
+    assert_eq!(paras("% P2 | x\nBefore\n\\[ a \\]\nafter."), vec![("P2".into(), 1, false), ("P2".into(), 1, false)]);
+    // not a label: no number, no bar, or a comment that is not a paragraph's
+    for c in ["% P | x", "% P3.2 the text", "% Note | x", "%P3"] {
+        assert_eq!(paras(&format!("{c}\nWords here.")), vec![("-".into(), 2, false)], "{c}");
+    }
+    assert_eq!(paras("%P3|x\nWords."), vec![("P3".into(), 1, false)]);
+}
+
+#[test]
+fn a_floats_caption_is_a_paragraph_of_its_own_and_the_count_does_not_change() {
+    let float = "Before the figure\n\\begin{figure}[ht]\n\\centering\n\\includegraphics{a.png}\n\\caption{A small caption.}\n\\end{figure}\nand after it.";
+    let c = count_with(float, &Rules::default());
+    let got: Vec<(String, usize, bool)> = c.paras.iter().map(|p| (p.label.clone(), p.n, p.float)).collect();
+    assert_eq!(got, vec![("-".into(), 3, false), ("-".into(), 3, true), ("-".into(), 3, false)]);
+    assert_eq!(c.paras[1].text, "A small caption.");
+    // the same words without the float boundaries: the count is the plugin's, recording paragraphs changes nothing
+    assert_eq!(c.sections[0].1, 9);
+    assert_eq!(n("Before the figure\n\\begin{center}\n\\caption{A small caption.}\n\\end{center}\nand after it."), 9);
+}
+
+#[test]
+fn citations_switched_off() {
+    let body = "As \\textcite{two} found \\parencite[p.~2]{one}, and \\citeauthor{three} too.";
+    let names = Names::from_bib(BIB);
+    let glossary = Glossary::from_tex(GLOSSARY, "term");
+    let count = |cites: bool| {
+        let cx = Context { rules: &Rules::default(), names: &names, glossary: &glossary, cites };
+        count_chapter(&format!("\\startwordcount{{k}}\n{body}\n\\stopwordcount\n"), &cx)
+    };
+    let on = count(true);
+    assert_eq!(on.sections[0].1, 12, "As Jones and Brown [0] found [0], and Alpha et al. too.");
+    assert!(on.paras[0].text.contains("[0],"), "a citation shows as [0]: {}", on.paras[0].text);
+    assert_eq!(count(false).sections[0].1, 4, "As found, and too.");
 }

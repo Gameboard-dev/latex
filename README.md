@@ -460,7 +460,8 @@ them with the notes in `.github/release-notes/<version>.md`. After a change to t
 | --- | --- |
 | `core/src/app.rs` | the plugin: settings, settings tab, watcher, commands, status bar, log |
 | `core/src/convert.rs` | the conversion rules, and the note-line to tex-line map |
-| `core/src/wordcount.rs` | the word counter and its built-in rules |
+| `wordcount/` | the word counter and its built-in rules, a crate of its own (`latex-wordcount`) that Quarry's command-line tools also count with |
+| `core/src/wordcount.rs` | the counter's ties to the plugin: warnings at their note line, the counts file |
 | `core/src/order.rs` | chapter ordering and `main.tex`'s `\input` lines |
 | `core/src/pipeline.rs` | what the watcher decides: names, stamps, compile-command steps, latexmk's stages |
 | `core/src/compile.rs` | the full build and the preview worker |

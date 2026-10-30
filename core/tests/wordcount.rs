@@ -50,7 +50,7 @@ fn count_in(dir: &Path, chapter: &str) -> (BTreeMap<String, usize>, Vec<(u32, St
     let glossary = Glossary::from_tex(&fs::read_to_string(dir.join("glossary.tex")).unwrap_or_default(), "term");
     // the Lua counter's rules: floats, pictures and tables not counted, verbatim blocks counted
     let rules = Rules::new(LUA_RULES, &Macros::default()).0;
-    let c = count_chapter(&fs::read_to_string(dir.join(chapter)).unwrap(), &Context { rules: &rules, names: &names, glossary: &glossary });
+    let c = count_chapter(&fs::read_to_string(dir.join(chapter)).unwrap(), &Context { rules: &rules, names: &names, glossary: &glossary, cites: true });
     (c.sections.into_iter().collect(), c.warnings)
 }
 
@@ -64,6 +64,27 @@ fn lua_counts() {
         assert!(wrong.is_empty() && got.len() == want.len(), "{doc}: {}", wrong.join("; "));
         assert!(warnings.is_empty(), "{doc}: {warnings:?}");
     }
+}
+
+/// The paragraphs Quarry's wordcount command lists add up to the sections' counts, under the Lua counter's rules and
+/// the plugin's (which count floats: their paragraphs are marked), on every document.
+#[test]
+fn paragraphs_add_up_to_the_counts() {
+    let names = Names::from_bib(&fs::read_to_string(data().join("My Library.bib")).unwrap());
+    let glossary = Glossary::from_tex(&fs::read_to_string(data().join("glossary.tex")).unwrap(), "term");
+    let expected = json("expected.json");
+    for rules in [Rules::new(LUA_RULES, &Macros::default()).0, Rules::default()] {
+        for doc in expected["documents"].as_object().unwrap().keys() {
+            let c = count_chapter(&fs::read_to_string(data().join(doc)).unwrap(), &Context { rules: &rules, names: &names, glossary: &glossary, cites: true });
+            let total: usize = c.sections.iter().map(|s| s.1).sum();
+            assert!(total > 0, "{doc}");
+            assert_eq!(c.paras.iter().map(|p| p.n).sum::<usize>(), total, "{doc}");
+            assert!(c.paras.iter().all(|p| p.n > 0 && !p.text.is_empty()), "{doc}");
+        }
+    }
+    let c = count_chapter(&fs::read_to_string(data().join("3-fixture.tex")).unwrap(), &Context { rules: &Rules::default(), names: &names, glossary: &glossary, cites: true });
+    assert!(c.paras.iter().any(|p| p.float), "the fixture's table and figure");
+    assert!(c.paras.iter().any(|p| p.label == "heading"));
 }
 
 #[test]
