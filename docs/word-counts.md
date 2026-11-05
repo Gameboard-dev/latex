@@ -1,7 +1,7 @@
 # Word counts
 
 The plugin counts the words of each counted section itself, from the LaTeX it has just written, so the counts need no
-particular engine and are right on the first LaTeX run. The counter is `core/src/wordcount.rs`.
+particular engine and are right on the first LaTeX run. The counter is the `word-count` crate.
 
 ## How it works
 
@@ -24,25 +24,31 @@ defines `\wordcount{key}`, `\totalwordcount` and `\printwordcount{key}`.
 
 ## What counts
 
+The counter is the `word-count` crate in `obsidian-cargo-lib` (`obsidian-plugins/word-count/`), shared with Quarry's
+`quarry-tools wordcount`. Better Word Count Enhanced uses the same definition of a word and the same rules from the note.
+
 - A word is a run of characters between two spaces, or en or em dashes (`--`, `---`, `–`, `—`), that holds a letter or a
-  digit. Any character beyond ASCII counts as a letter. `one-to-one` is one word; a stray `--` or `(` is none. A tie
-  `~` is a space; a thin space `\,` is not, so `372\,ms` is one word.
+  digit. Any character beyond ASCII counts as a letter. `one-to-one` and `e.g.` are one word; a stray `--` or `(` is none. A
+  tie `~` is a space; a thin space `\,` is not, so `372\,ms` is one word.
 - Only text between the start and stop macros counts, and nothing in the group of the off macro
   (`{\wordcountoff ...}`). The appendix is left out by having no `wordcount` property.
-- Running text, headings, footnotes, captions (not their "Figure 3:") and the text in table cells count (`&` separates
-  words).
-- Inline maths (`$x$`, `\(x\)`) is one word (the `inlineMathWord` key; off, it counts nothing).
-- Section numbers, footnote marks, displayed maths, TikZ pictures and code (`verbatim` blocks and listings) do not
-  count. To count a picture's node and label text instead (`\node {text}`, `node {text}` on a path,
-  `label=above:{text}`, each label a paragraph of its own), add the rule `tikzpicture labels`.
-- A citation's brackets, with all they hold, are one word (`[3, p. 27]`). A narrative citation (`\citet`) counts the
-  authors' family names from the `.bib` (`Smith`, `Smith and Jones` or `Smith et al.`), then its one-word brackets.
-  The editors stand in where there are no authors, and the title where there are no names.
+- Running text, headings, footnotes and the text in table cells count (`&` separates words). A caption counts with its
+  printed label: `Figure 3:` is two words.
+- Inline maths (`$x$`, `\(x\)`) is one word (the `inlineMathWord` key; off, it counts nothing). Each displayed equation
+  (`equation`, `align`, `$$ ... $$`) is one word, however many rows it has.
+- Code counts as written: `verbatim` blocks line by line, and a hand-typed listing by the words the plugin writes after its
+  command, `\handtypedcode{name}%code-words 12`, since its code is in a file of its own.
+- A TikZ picture counts the text it prints (`\node {text}`, `node {text}` on a path, `label=above:{text}`), once for each
+  pass of a `\foreach` loop, whose lists are written out first; `$...$` in a label is inline maths. Its drawing commands
+  never count. A loop whose list is defined elsewhere counts its labels once, and a loop stops at 1,000 passes.
+- A citation counts as printed: one word per work and the words of its notes (`[3, p. 27]` is three, `[3], [4]` two). A
+  narrative citation (`\citet`) adds the authors' family names from the `.bib` (`Smith`, `Smith and Jones` or `Smith et
+  al.`). The editors stand in where there are no authors, and the title where there are no names.
 - A glossary entry (`\gls`) counts its text from the glossary; `\glspl` adds an `s`. An entry printed as maths counts as
   inline maths.
 - A reference (`\ref`, `\eqref`, `\rqref`, `\hypref`) is one word, run into the characters around it.
-- An enumerate item's number and an itemize item's bullet are one word each; a description item without a label is
-  none. A numbered row of `align`, `gather` or `multline` is one word; an `equation`'s number is none.
+- An enumerate item's number is one word; an itemize item's bullet and a description item without a label are none.
+- Section numbers and footnote marks do not count.
 
 Two differences from the typeset page: a word hyphenated across a page break counts once, and a `\ref` to a missing
 label counts as one word where LaTeX prints `??`.
@@ -70,7 +76,11 @@ A command's behaviour is one of:
 | `heading` | the same, as a paragraph of its own (`\section`) |
 | `runin` | the same, then a space (`\paragraph`) |
 | `footnote` | the argument counts as a paragraph of its own; the mark is not a word |
-| `one` | one word, whatever it holds, separate from the word before it (a citation) |
+| `cite` | a citation as printed: one word per work and the words of its notes |
+| `names-cite` | a narrative citation as printed: the authors' names from the `.bib`, then the citation |
+| `caption` | a caption as printed: its label is two words, then its text |
+| `listing` | a listing's code, kept in a file: the words the `%code-words n` comment after it gives |
+| `one` | one word, whatever it holds, separate from the word before it |
 | `names` | the authors' names from the `.bib`, then one word (a narrative citation) |
 | `authors` | the names only (`\citeauthor`) |
 | `value` | one word, run into the characters around it (`\ref`) |
@@ -82,7 +92,7 @@ A command's behaviour is one of:
 | `par` | ends the paragraph |
 | `start`, `print`, `stop`, `off` | the counter's macros |
 
-An environment's behaviour is `count` (running text), `skip`, `math`, `math-rows` (each numbered row is one word),
+An environment's behaviour is `count` (running text), `skip`, `math`, `math-one` (one word, whatever it holds), `math-rows` (each numbered row is one word),
 `math-once` (its number, if any, is one word), `list` (an `\item` without a label is one word), `list-plain` (it is
 none), `verbatim` (counted line by line, as it stands) or `labels` (a TikZ picture: only its nodes' and labels' text).
 
@@ -99,24 +109,7 @@ itemize list-plain
 myenv skip
 ```
 
-The built-in table, in the same syntax, is `DEFAULT_RULES` in `core/src/wordcount.rs`. In short:
-
-| Behaviour | Commands and environments |
-| --- | --- |
-| `heading`, `runin` | `\section` `\subsection` `\subsubsection` (`som`); `\paragraph` `\subparagraph` |
-| `text` | `\emph` `\textit` `\textbf` `\texttt` `\textsc` `\textsf` `\textrm` `\textup` `\textmd` `\textsl` `\textnormal` `\mbox` (`m`); `\textcolor` `\href` `\glslink` (`omm`); `\hypertarget` (`mm`); the accents `\c` `\v` `\u` `\H` `\r` `\k` `\d` `\b` `\t` |
-| `footnote` | `\footnote` (`om`) |
-| `one` | `\cite` `\Cite` `\citep` `\parencite` `\Parencite` `\autocite` `\citealp` (`soom`); `\cites` `\parencites` (`oom+`) |
-| `names`, `authors` | `\citet` `\Citet` `\textcite` `\Textcite` (`soom`); `\textcites` (`oom+`); `\citeauthor` `\Citeauthor` |
-| `value` | `\ref` `\pageref` (`sm`); `\eqref` `\rqref` `\hypref`; `\citeyear`; the letters `\i` `\j` `\l` `\L` `\o` `\O` `\ss` `\ae` `\AE` `\oe` `\OE` `\aa` `\AA` |
-| `glossary` | `\gls` `\Gls`; `glossary-plural`: `\glspl` `\Glspl` (`om`) |
-| `math` | `\url` |
-| `space` | `\\` (`so`), `\newline`, `\linebreak`, `\quad`, `\qquad`, `\hspace`, `\hfill`, `\textendash`, `\textemdash` |
-| `par` | `\par`, `\vspace`, `\smallskip`, `\medskip`, `\bigskip` |
-| `skip` | `\label` `\nocite` `\phantomsection` `\addcontentsline` `\FloatBarrier` `\clearpage` `\newpage` `\cleardoublepage` `\noindent` `\indent` `\centering` `\raggedright` `\raggedleft`, the size and font switches (`\small`, `\bfseries` ...), `\ldots` `\dots` `\protect` `\relax` `\nobreak` `\enspace` `\thinspace`, and `\%` `\&` `\#` `\$` `\_` `\{` `\}` `\,` `\;` `\:` `\!` `\/` `\-` `\@` `\'` `` \` `` `\^` `\"` `\~` `\=` `\.` |
-| `item` | `\item` (`o`) |
-| floats | `text`: `\caption` (`som`), `\resizebox` (`mmm`), `\scalebox` (`om`), `\multicolumn` (`mmm`), `\multirow` (`omm`); `skip`: `\includegraphics` (`om`), `\toprule` `\midrule` `\bottomrule` `\addlinespace` (`o`), `\hline`, `\cline` (`m`), `\endhead` `\endfirsthead` `\endfoot` `\endlastfoot` |
-| environments | `count`: `figure` `table` (and starred; `o`), `tabular` (`m`), `tabular*` `tabularx` (`mm`), `longtable` (`om`), `center` `flushleft` `flushright` `quote` `quotation`; `skip`: `tikzpicture` `handtyped` `Verbatim` `lstlisting` `minted` `verbatim`; `math`: `equation` `equation*` `displaymath` `align*` `gather*` `flalign*` `alignat*` `multline*`; `math-rows`: `align` `gather` `flalign` `alignat`; `math-once`: `multline`; `list`: `enumerate` `itemize`; `list-plain`: `description` |
+The built-in table, in the same syntax, is `DEFAULT_RULES` in the `word-count` crate.
 
 ## Reported in the log
 

@@ -1228,7 +1228,7 @@ impl App {
 
     /// A chapter counted with the rules, names and glossary as they are now.
     fn count(&self, tex: &str) -> wordcount::Counts {
-        count_chapter(tex, &Context { rules: &self.count_rules, names: &self.names.1, glossary: &self.glossary })
+        count_chapter(tex, &Context { rules: &self.count_rules, names: &self.names.1, glossary: &self.glossary, cites: true })
     }
 
     /// A chapter's counts kept, or dropped when it has no counted section.
@@ -1423,6 +1423,8 @@ async fn convert_note(name: &str, md: &str, building: bool) -> bool {
     };
     let (tex, mut warn, sections, code) = match md_to_tex_code(name, md, &idx, &o) {
         Ok((tex, mut warn, map, code)) => {
+            let files: Vec<(String, String)> = code.iter().map(|f| (f.name.clone(), f.text.clone())).collect();
+            let tex = wordcount::mark_listings(tex, &o.listing_cmd, &files);
             // the chapter's word counts, its warnings placed in the note; the note's line map, for sync scrolling
             let sections = with(|a| {
                 let c = if a.counted(md) { a.count(&tex) } else { wordcount::Counts::default() };
